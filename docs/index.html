@@ -20,7 +20,10 @@
 </head>
 
 <body>
-<a href=".catwithascarf.html" title="Cat With a Scarf"><img class="paintbrush" src="paintbrush.png" onmouseover="changeImage()" onmouseout="restoreImage()"/></a>
+    <a href=".catwithascarf.html" title="Cat With a Scarf">
+        <img class="paintbrush" src="paintbrush.png" ontouchstart="changeImage()" ontouchend="restoreImage()" 
+             onmouseover="changeImage()" onmouseout="restoreImage()"/>
+    </a>
 
 <div id="emailFormContainer" class="hidden">
   <a title="Email" class="emaillink" href="mailto: christiansheehan@christiansheehan.com" id="emailAddress" style="margin-bottom: 10px;">christiansheehan@christiansheehan.com</a>
@@ -123,18 +126,19 @@
         cursor:pointer;/* Slightly darker color on hover */
     }
 
-
 </style>
 
 <script>
-function changeImage() {
+    
+    function changeImage() {
     document.querySelector('.paintbrush').src = 'catwithascarf.jpg';
+    document.querySelector('.paintbrush').classList.add('active');
 }
 
 function restoreImage() {
     document.querySelector('.paintbrush').src = 'paintbrush.png';
+    document.querySelector('.paintbrush').classList.remove('active');
 }
-
 function toggleEmailForm() {
     var emailFormContainer = document.getElementById('emailFormContainer');
     var emailForm = document.getElementById('emailForm');
