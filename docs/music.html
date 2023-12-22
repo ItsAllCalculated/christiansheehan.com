@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -177,14 +178,14 @@
   </nav>
 
   <div class="image-container">
-    <div class="container">
+    <div class="container" ontouchstart="toggleActive(this)">
       <a href="your_link_for_catwithascarf.html">
         <img class="image" src="catwithascarf.jpg" alt="Cat With a Scarf">
         <div class="text">Cat With a Scarf</div>
         <div class="date">8 Tracks • 2023</div>
       </a>
     </div>
-    <div class="container">
+    <div class="container" ontouchstart="toggleActive(this)">
       <a href="your_link_for_toth.html">
         <img class="image" src="toth.png" alt="Dustin Toth">
         <div class="text">Dustin Toth</div>
@@ -192,7 +193,7 @@
       </a>
     </div>
 
-    <div class="container">
+    <div class="container" ontouchstart="toggleActive(this)">
       <a href="your_link_for_bubbo.html">
         <img class="image" src="bubbo.png" alt="Bubbo OST">
         <div class="text">Bubbo OST</div>
@@ -202,5 +203,15 @@
   </div>
 <br>
 </body>
+<script>
+  function toggleActive(element) {
+    // Remove 'active' class from all album containers
+    document.querySelectorAll('.container').forEach(function (el) {
+      el.classList.remove('active');
+    });
 
+    // Toggle 'active' class for the clicked album container
+    element.classList.toggle('active');
+  }
+</script>
 </html>
