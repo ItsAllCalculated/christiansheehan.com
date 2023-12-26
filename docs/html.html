@@ -135,50 +135,37 @@
         </a>
       </div>
     </nav>
-    <div spellcheck="false" id="editor" contenteditable="true" oninput="updateOutput()">
-      Type your code here
-    </div>
+    <div spellcheck="false" id="editor" contenteditable="true" oninput="updateOutput()" onclick="clearPlaceholder()">
+        Type your code here
+      </div>
     <iframe id="output" sandbox="allow-same-origin allow-scripts"></iframe>
-  
     <script>
-      function updateOutput() {
-        var editorContent = document.getElementById('editor').innerText;
-        var outputFrame = document.getElementById('output');
-        var outputDocument = outputFrame.contentWindow.document;
-  
-        outputDocument.open();
-        outputDocument.write(editorContent);
-        outputDocument.close();
-      }
-  
-      function toggleFullscreen() {
-        var editor = document.getElementById('output');
-  
-        if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
-          // Exit fullscreen
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-          } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-          } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-          }
-        } else {
-          // Enter fullscreen
-          if (editor.requestFullscreen) {
-            editor.requestFullscreen();
-          } else if (editor.webkitRequestFullscreen) {
-            editor.webkitRequestFullscreen();
-          } else if (editor.mozRequestFullScreen) {
-            editor.mozRequestFullScreen();
-          } else if (editor.msRequestFullscreen) {
-            editor.msRequestFullscreen();
-          }
+        function updateOutput() {
+          var editorContent = document.getElementById('editor').innerText;
+          var outputFrame = document.getElementById('output');
+          var outputDocument = outputFrame.contentWindow.document;
+    
+          outputDocument.open();
+          outputDocument.write(editorContent);
+          outputDocument.close();
         }
-      }
-    </script>
+    
+        function toggleFullscreen() {
+          var editor = document.getElementById('editor');
+          var output = document.getElementById('output');
+
+    
+          // Toggle the visibility of the editor
+          editor.style.display = editor.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function clearPlaceholder() {
+    var editor = document.getElementById('editor');
+    if (editor.innerText === 'Type your code here') {
+      editor.innerText = '';
+    }
+  }
+      </script>
   
   </body>
   
