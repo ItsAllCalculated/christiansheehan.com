@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live HTML Editor</title>
+  <link rel="shortcut icon" href="paintbrush.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+    body {
+            font-family: 'Sometype Mono', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-size: 15px;
+        }
+/* width */
+      ::-webkit-scrollbar {
+         width: 5px;
+      }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:black;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #242424; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #242424; 
+}
+    nav {
+      justify-content: space-between;
+      background-color: #242424;
+      padding: 7px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      align-items: left;
+      margin-top: 2px;
+    }
+
+    /* Style for the Home link */
+    .home-link {
+      margin-right: 5px;
+      margin-top: 5px;
+      margin-left: 2px;
+      /* Minimal margin between the home link and music link */
+       /* Add transition effect */
+    }
+
+    /* Hover style for the Home link */
+    .home-link:hover {
+      filter: brightness(70%);
+    }
+    .music-link {
+      align-items: center;
+      text-align: left;
+      font-size: 15px;
+      margin-left: 15px;
+      margin-right: auto; /* Minimal margin between the home link and music link */
+      cursor: default;
+    }
+
+    .streaming-links {
+      text-align: right;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-bottom: 0px;
+    }
+
+    .streaming-links a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    .streaming-links a:hover {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      opacity: 0.7;
+    }
+
+    .streaming-links i {
+      font-size: 1.4em;
+    }
+
+    #editor {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            height: 300px;
+            overflow: auto;
+            background-color: black;
+            color: white;
+            margin: 0;
+            flex-shrink: 0;
+            caret-color: white; /* Set the caret color to white */
+            outline: none; 
+            /* Remove the default focus outline */
+        }
+
+        #output {
+            flex-grow: 1; /* Take up the remaining vertical space */
+            width: 100%;
+            border: none; /* Remove border for iframe */
+        }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a title="Home" href="#" class="nav-link home-link"><img width="30px" src="paintbrush.png" /></a>
+    <a class="nav-link music-link">Live HTML Editor</a>
+    <div class="streaming-links">
+       
+      </div>
+  </nav>
+  <div spellcheck="false" id="editor" contenteditable="true" oninput="updateOutput()">
+    Type your code here
+</div>
+<iframe id="output" sandbox="allow-same-origin allow-scripts"></iframe>
+
+<script>
+    function updateOutput() {
+        var editorContent = document.getElementById('editor').innerText;
+        var outputFrame = document.getElementById('output');
+        var outputDocument = outputFrame.contentWindow.document;
+
+        outputDocument.open();
+        outputDocument.write(editorContent);
+        outputDocument.close();
+    }
+</script>
+
+</body>
+
+</html>
