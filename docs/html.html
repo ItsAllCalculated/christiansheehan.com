@@ -93,6 +93,7 @@
       color: white;
       text-decoration: none;
       opacity: 0.7;
+      cursor: pointer;
     }
 
     .streaming-links i {
@@ -117,37 +118,68 @@
         #output {
             flex-grow: 1; /* Take up the remaining vertical space */
             width: 100%;
-            border: none; /* Remove border for iframe */
+            border: none;
+            background-color:white; /* Remove border for iframe */
         }
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <a title="Home" href="#" class="nav-link home-link"><img width="30px" src="paintbrush.png" /></a>
-    <a class="nav-link music-link">Live HTML Editor</a>
-    <div class="streaming-links">
-       
+    <nav>
+      <a title="Home" href="#" class="nav-link home-link"><img width="30px" src="paintbrush.png" /></a>
+      <a class="nav-link music-link">Live HTML Editor</a>
+      <div class="streaming-links">
+        <a onclick="toggleFullscreen()">
+          <i class="fas fa-expand"></i>
+        </a>
       </div>
-  </nav>
-  <div spellcheck="false" id="editor" contenteditable="true" oninput="updateOutput()">
-    Type your code here
-</div>
-<iframe id="output" sandbox="allow-same-origin allow-scripts"></iframe>
-
-<script>
-    function updateOutput() {
+    </nav>
+    <div spellcheck="false" id="editor" contenteditable="true" oninput="updateOutput()">
+      Type your code here
+    </div>
+    <iframe id="output" sandbox="allow-same-origin allow-scripts"></iframe>
+  
+    <script>
+      function updateOutput() {
         var editorContent = document.getElementById('editor').innerText;
         var outputFrame = document.getElementById('output');
         var outputDocument = outputFrame.contentWindow.document;
-
+  
         outputDocument.open();
         outputDocument.write(editorContent);
         outputDocument.close();
-    }
-</script>
-
-</body>
-
-</html>
+      }
+  
+      function toggleFullscreen() {
+        var editor = document.getElementById('output');
+  
+        if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+          // Exit fullscreen
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        } else {
+          // Enter fullscreen
+          if (editor.requestFullscreen) {
+            editor.requestFullscreen();
+          } else if (editor.webkitRequestFullscreen) {
+            editor.webkitRequestFullscreen();
+          } else if (editor.mozRequestFullScreen) {
+            editor.mozRequestFullScreen();
+          } else if (editor.msRequestFullscreen) {
+            editor.msRequestFullscreen();
+          }
+        }
+      }
+    </script>
+  
+  </body>
+  
+  </html>
