@@ -323,9 +323,9 @@ nav {
   state = {
     index: 0,
     currentTime: '0:00',
-    musicList: [{name:'Dustin Toth', audio:'Dustin Toth.mp3', duration: '0:31'},
-      {name:'Dustin Toth (Extended)', audio:'Dustin Toth (Extended).mp3', duration: '3:47'},
-      {name:'Dustin Toth Lofi', audio:'Dustin Toth Lofi.mp3', duration: '2:20'}],
+    musicList: [{name:'Dustin Toth', audio:'audio/Dustin Toth.mp3', duration: '0:31'},
+      {name:'Dustin Toth (Extended)', audio:'audio/Dustin Toth (Extended).mp3', duration: '3:47'},
+      {name:'Dustin Toth Lofi', audio:'audio/Dustin Toth Lofi.mp3', duration: '2:20'}],
     pause: false,
   };
 
@@ -476,7 +476,7 @@ formatTime = (currentTime) =>{
               Your browser does not support the audio element.
           </audio>
           <div className="img-wrap">
-            <img title="Dustin Toth" src="toth.png"/>
+            <img title="Dustin Toth" src="images/toth.jpg"/>
            </div>
           <span className="song-name">{ currentSong.name }</span>
  
