@@ -1,2 +1,2 @@
 # christiansheehan.com
-the new hosting home for my legendary website. long live christian sheehan!
+The hosting home for christiansheehan.com.
