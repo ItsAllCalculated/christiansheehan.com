@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Christian Sheehan</title>
-    <link rel="shortcut icon" href="paintbrush.png">
+    <link rel="shortcut icon" href="images/favicon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158079571-1"></script>
@@ -18,7 +18,7 @@
 
 <body>
     <a href="https://christiansheehan.com/catwithascarf/musicplayer.html" title="Cat With a Scarf">
-        <img class="paintbrush" src="paintbrush.png" ontouchstart="changeImage()" ontouchend="restoreImage()" onmouseover="changeImage()" onmouseout="restoreImage()"/>
+        <img class="paintbrush" src="images/paintbrush.jpg" ontouchstart="changeImage()" ontouchend="restoreImage()" onmouseover="changeImage()" onmouseout="restoreImage()"/>
     </a>
 
 <div id="emailFormContainer" class="hidden">
@@ -93,27 +93,27 @@
     }
     .emaillink {
         color: white;
-        text-decoration: none; /* Remove underline */
+        text-decoration: none;
         transition: color 0s; 
-/* Add transition effect for color change */
     }
 
     .emaillink:hover {
         opacity:0.7; 
-        cursor:pointer;/* Slightly darker color on hover */
+        cursor:pointer;
     }
     .copy{
       color: white;
-        text-decoration: none; /* Remove underline */
+        text-decoration: none;
         transition: color 0s; 
     }
     .copy:hover {
         opacity:0.7; 
-        cursor:pointer;/* Slightly darker color on hover */
+        cursor:pointer;
     }
 </style>
 
 <script>
+
 function changeImage() {
     document.querySelector('.paintbrush').src = 'catwithascarf.jpg';
     document.querySelector('.paintbrush').classList.add('active');
@@ -123,6 +123,7 @@ function restoreImage() {
     document.querySelector('.paintbrush').src = 'paintbrush.png';
     document.querySelector('.paintbrush').classList.remove('active');
 }
+    
 function toggleEmailForm() {
     var emailFormContainer = document.getElementById('emailFormContainer');
     var emailForm = document.getElementById('emailForm');
