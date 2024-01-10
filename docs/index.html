@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html>
+
 <head>
     <title>Christian Sheehan</title>
     <meta name="description" content="before real estate was real">
@@ -8,146 +10,158 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158079571-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'UA-158079571-1');
     </script>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 </head>
 
 <body>
     <a href="https://christiansheehan.com/catwithascarf/musicplayer.html" title="Cat With a Scarf">
-        <img class="paintbrush" src="images/paintbrush.png" ontouchstart="changeImage()" ontouchend="restoreImage()" onmouseover="changeImage()" onmouseout="restoreImage()"/>
+        <img class="paintbrush" src="images/paintbrush.png" ontouchstart="changeImage()" ontouchend="restoreImage()" onmouseover="changeImage()" onmouseout="restoreImage()" />
     </a>
 
-<div id="emailFormContainer" class="hidden">
-  <a title="Email" class="emaillink" href="mailto: christiansheehan@christiansheehan.com" id="emailAddress" style="margin-bottom: 10px;">christiansheehan@christiansheehan.com</a>
-  <a title="Copy" class="copy" class="emaillink" onclick="copyToClipboard()" style="margin-left: 10px;"><i class="fa-regular fa-copy fa-xl"></i></a>
-</div>
+    <div id="emailFormContainer" class="hidden">
+        <a title="Email" class="emaillink" href="mailto:christiansheehan@christiansheehan.com" id="emailAddress" style="margin-bottom: 10px;">christiansheehan@christiansheehan.com</a>
+        <a title="Copy" class="copy" onclick="copyToClipboard()" style="margin-left: 10px;"><i class="fa-regular fa-copy fa-xl"></i></a>
+    </div>
 
-<ul class="nav">
-    <li><a title="YouTube" target="_blank" href="https://youtube.com/christiansheehan"><i class="fa fa-youtube-play fa-2x"></i></a></li>
-    <li><a class="Email" title="Email" onclick="toggleEmailForm()"><i class="fa fa-envelope fa-2x"></i></a></li>
-    <li><a title="Music" href="/music"><i class="fa fa-music fa-2x"></i></a></li>
-    <li><a title="Projects" href="/projects"><i class="fa fa-code fa-2x"></i></a></li>
-</ul>
+    <ul class="nav">
+        <li><a title="YouTube" target="_blank" href="https://youtube.com/christiansheehan"><i class="fa fa-youtube-play fa-2x"></i></a></li>
+        <li><a class="Email" title="Email" onclick="toggleEmailForm()"><i class="fa fa-envelope fa-2x"></i></a></li>
+        <li><a title="Music" href="/music"><i class="fa fa-music fa-2x"></i></a></li>
+        <li><a title="Projects" href="/projects"><i class="fa fa-code fa-2x"></i></a></li>
+    </ul>
 
-<style>
-    body {
-        background-color:#000000;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        color:white;
-    }
-    .paintbrush {
-        position: absolute;
-        width:275px;
-        height:275px;
-        top: 35%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-    .Email {
-        cursor: pointer;
-    }
-    .nav {
-        color: #fff;
-        list-style: none;
-        padding: 25px 0 25px 0;
-        position: absolute;
-        top: 65%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-    }
-    .nav > li {
-        display: inline-block;
-        padding: 0 18px 0 18px;
-    }
-    .nav > li > a {
-        color: #fff;
-    }
-    .nav > li > a:hover {
-        opacity:0.7;
-    }
+    <style>
+        body {
+            background-color: #000000;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            color: white;
+        }
 
-    #emailFormContainer {
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        top: 60%;
-        white-space: nowrap;
-    }
+        .paintbrush {
+            position: absolute;
+            width: 275px;
+            height: 275px;
+            top: 35%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
 
-    #emailForm {
-        display: none;
-    }
+        .Email {
+            cursor: pointer;
+        }
 
-    .hidden {
-        display: none;
-    }
-    .emaillink {
-        color: white;
-        text-decoration: none;
-        transition: color 0s; 
-    }
+        .nav {
+            color: #fff;
+            list-style: none;
+            padding: 25px 0 25px 0;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
 
-    .emaillink:hover {
-        opacity:0.7; 
-        cursor:pointer;
-    }
-    .copy{
-      color: white;
-        text-decoration: none;
-        transition: color 0s; 
-    }
-    .copy:hover {
-        opacity:0.7; 
-        cursor:pointer;
-    }
-</style>
+        .nav>li {
+            display: inline-block;
+            padding: 0 18px 0 18px;
+        }
 
-<script>
+        .nav>li>a {
+            color: #fff;
+        }
 
-function changeImage() {
-    document.querySelector('.paintbrush').src = 'images/catwithascarf.jpg';
-    document.querySelector('.paintbrush').classList.add('active');
-}
+        .nav>li>a:hover {
+            opacity: 0.7;
+        }
 
-function restoreImage() {
-    document.querySelector('.paintbrush').src = 'images/paintbrush.png';
-    document.querySelector('.paintbrush').classList.remove('active');
-}
-    
-function toggleEmailForm() {
-    var emailFormContainer = document.getElementById('emailFormContainer');
-    var emailForm = document.getElementById('emailForm');
+        #emailFormContainer {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            top: 60%;
+            white-space: nowrap;
+        }
 
-    if (emailFormContainer.classList.contains('hidden')) {
-        // Show the email form
-        emailFormContainer.classList.remove('hidden');
-        emailForm.style.display = 'block';
-    } else {
-        // Hide the email form
-        emailFormContainer.classList.add('hidden');
-        emailForm.style.display = 'none';
-    }
-}
+        #emailForm {
+            display: none;
+        }
 
-function copyToClipboard() {
-    var emailAddress = document.getElementById('emailAddress');
-    var textarea = document.createElement('textarea');
-    textarea.value = emailAddress.textContent;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-}
-</script>
+        .hidden {
+            display: none;
+        }
+
+        .emaillink {
+            color: white;
+            text-decoration: none;
+            transition: color 0s;
+        }
+
+        .emaillink:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        .copy {
+            color: white;
+            text-decoration: none;
+            transition: color 0s;
+        }
+
+        .copy:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function changeImage() {
+            document.querySelector('.paintbrush').src = 'images/catwithascarf.jpg';
+            document.querySelector('.paintbrush').classList.add('active');
+        }
+
+        function restoreImage() {
+            document.querySelector('.paintbrush').src = 'images/paintbrush.png';
+            document.querySelector('.paintbrush').classList.remove('active');
+        }
+
+        function toggleEmailForm() {
+            var emailFormContainer = document.getElementById('emailFormContainer');
+            var emailForm = document.getElementById('emailForm');
+
+            if (emailFormContainer.classList.contains('hidden')) {
+                emailFormContainer.classList.remove('hidden');
+                emailForm.style.display = 'block';
+            } else {
+                emailFormContainer.classList.add('hidden');
+                emailForm.style.display = 'none';
+            }
+        }
+
+        function copyToClipboard() {
+            var emailAddress = document.getElementById('emailAddress');
+            var textarea = document.createElement('textarea');
+            textarea.value = emailAddress.textContent;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+    </script>
 </body>
+
+</html>
