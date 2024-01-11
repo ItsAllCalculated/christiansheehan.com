@@ -49,12 +49,19 @@
             overflow-y: hidden;
             color: white;
         }
-
+        @media (max-width: 600px) {
+   .paintbrush{
+    top:33%;
+   }
+   .nav {
+    top:67%;
+   }
+}
         .paintbrush {
             position: absolute;
             width: 275px;
             height: 275px;
-            top: 33%;
+            top: 35%;
             left: 50%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -69,7 +76,7 @@
             list-style: none;
             padding: 25px 0 25px 0;
             position: absolute;
-            top: 67%;
+            top: 65%;
             left: 50%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
