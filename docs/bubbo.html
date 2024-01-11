@@ -50,29 +50,22 @@
       margin-top: 2px;
     }
 
-
-
-    /* Style for the Home link */
     .home-link {
       margin-right: 5px;
       margin-top: 5px;
       margin-left: 2px;
-      /* Minimal margin between the home link and music link */
-       /* Add transition effect */
     }
 
-    /* Hover style for the Home link */
     .home-link:hover {
       filter: brightness(70%);
     }
 
-    /* Style for the Music link */
     .music-link {
       align-items: center;
       text-align: left;
       font-size: 15px;
       margin-left: 15px;
-      margin-right: auto; /* Minimal margin between the home link and music link */
+      margin-right: auto;
       cursor: default;
     }
 
@@ -123,7 +116,7 @@
       width: 85%;
       height: auto;
       display: block;
-      margin: 0 auto; /* Center the image horizontally */
+      margin: 0 auto;
       transition: 0s;
     }
 
@@ -134,7 +127,7 @@
       transform: translate(-50%, -50%);
       opacity: 0;
       color: white;
-      white-space: nowrap; /* Ensure the text stays in one line */
+      white-space: nowrap;
     }
 
     .date {
@@ -165,7 +158,7 @@
         background-color:#242424;
         height:100%;
     }
-    /* Media Query for smaller screens */
+
     @media (max-width: 600px) {
       .image-container {
         flex-direction: column;
@@ -191,7 +184,7 @@
 
   <nav>
     <link rel="shortcut icon" href="paintbrush.png">
-    <a title="Home" href="#" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
+    <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
     <a class="nav-link music-link">Bubbo: The Lost Hat</a>
     <div class="streaming-links">
     <!--  <a title="Google Play" target="_blank" href=""><i class="fa-brands fa-google-play"></i></a>-->
