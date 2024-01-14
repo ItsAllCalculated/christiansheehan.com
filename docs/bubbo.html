@@ -7,8 +7,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
   <style>
-    /* Your existing styles remain unchanged */
+    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+    body {
+      font-family: 'Sometype Mono', sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      overflow-x: hidden;
+    }
+/* width */
+      ::-webkit-scrollbar {
+         width: 5px;
+      }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background:black;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #242424; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #242424; 
+}
+    nav {
+      justify-content: space-between;
+      background-color: #242424;
+      padding: 7px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      align-items: left;
+      margin-top: 2px;
+    }
+
+    .home-link {
+      margin-right: 5px;
+      margin-top: 5px;
+      margin-left: 2px;
+    }
+
+    .home-link:hover {
+      filter: brightness(70%);
+    }
+
+    .music-link {
+      align-items: center;
+      text-align: left;
+      font-size: 15px;
+      margin-left: 15px;
+      margin-right: auto;
+      cursor: default;
+    }
+
+    .streaming-links {
+      text-align: right;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-bottom: 0px;
+    }
+
+    .streaming-links a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    .streaming-links a:hover {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      opacity: 0.7;
+    }
+
+    .streaming-links i {
+      font-size: 1.4em;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      position: relative;
+      width: 250px;
+      margin-top: 25px;
+      margin: 25px -8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image {
+      width: 85%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      transition: 0s;
+    }
+
+    .text {
+      left: 50%;
+      position: absolute;
+      top: 80%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .date {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 15px;
+      opacity: 0;
+      transition: 0s;
+
+      white-space: nowrap;
+    }
+
+    .container:hover .image {
+      filter: brightness(70%);
+    }
+
+    .container:hover .text {
+      opacity: 1;
+    }
+
+    .container:hover .date {
+      opacity: 1;
+    }
+    .gameinfo {
+        background-color:#242424;
+        height:100%;
+    }
+
+    @media (max-width: 600px) {
+      .image-container {
+        flex-direction: column;
+        margin-top:15px;
+      }
+      .image {
+      width: 100%;
+    }
+    .container {
+      position: relative;
+      width: 250px;
+      margin-top: 25px;
+      margin: 10px -8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     @media (max-width: 600px) {
       .image-container {
         flex-direction: column;
@@ -39,6 +206,7 @@
         margin-top: 15px;
         color: white;
       }
+    }
     }
   </style>
 </head>
