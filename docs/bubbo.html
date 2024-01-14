@@ -262,9 +262,12 @@
 
     // Initial check on page load
     if (window.innerWidth <= 600) {
-      document.getElementById('game-iframe').style.display = 'none';
-      document.querySelector('.mobile-message').style.display = 'block';
-    }
+        iframe.style.display = 'none';
+        mobileMessage.style.display = 'block';
+      } else if (window.innerWidth > 600) {
+        iframe.style.display = 'block';
+        mobileMessage.style.display = 'none';
+      }
   </script>
 
 </body>
