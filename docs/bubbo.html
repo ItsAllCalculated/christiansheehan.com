@@ -211,7 +211,8 @@
   </style>
   
   <script>
-      modocument.querySelector('.mobile-message').style.display = 'none';
+        var mobileMessage = document.querySelector('.mobile-message');
+      mobileMessage.style.display = 'none';
 window.addEventListener('resize', toggleVisibility);
 
 window.addEventListener('load', toggleVisibility);
