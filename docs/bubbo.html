@@ -205,12 +205,17 @@
         text-align: center;
         margin-top: 15px;
         color: white;
+        height:500px;
       }
     }
     }
   </style>
   
   <script>
+
+window.addEventListener('resize', toggleVisibility);
+
+window.addEventListener('load', toggleVisibility);
 
   function toggleVisibility() {
     var iframe = document.getElementById('game-iframe');
