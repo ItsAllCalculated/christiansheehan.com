@@ -209,6 +209,32 @@
     }
     }
   </style>
+  
+  <script>
+    // JavaScript to toggle visibility based on screen width
+    window.addEventListener('resize', function () {
+      var iframe = document.getElementById('game-iframe');
+      var mobileMessage = document.querySelector('.mobile-message');
+
+      if (window.innerWidth <= 600) {
+        iframe.style.display = 'none';
+        mobileMessage.style.display = 'block';
+      } else if (window.innerWidth > 600) {
+        iframe.style.display = 'block';
+        mobileMessage.style.display = 'none';
+      }
+    });
+
+    // Initial check on page load
+    if (window.innerWidth <= 600) {
+        iframe.style.display = 'none';
+        mobileMessage.style.display = 'block';
+      } else if (window.innerWidth > 600) {
+        iframe.style.display = 'block';
+        mobileMessage.style.display = 'none';
+      }
+  </script>
+
 </head>
 
 <body>
@@ -244,31 +270,6 @@
       <br>
     </div>
   </center>
-
-  <script>
-    // JavaScript to toggle visibility based on screen width
-    window.addEventListener('resize', function () {
-      var iframe = document.getElementById('game-iframe');
-      var mobileMessage = document.querySelector('.mobile-message');
-
-      if (window.innerWidth <= 600) {
-        iframe.style.display = 'none';
-        mobileMessage.style.display = 'block';
-      } else if (window.innerWidth > 600) {
-        iframe.style.display = 'block';
-        mobileMessage.style.display = 'none';
-      }
-    });
-
-    // Initial check on page load
-    if (window.innerWidth <= 600) {
-        iframe.style.display = 'none';
-        mobileMessage.style.display = 'block';
-      } else if (window.innerWidth > 600) {
-        iframe.style.display = 'block';
-        mobileMessage.style.display = 'none';
-      }
-  </script>
 
 </body>
 
