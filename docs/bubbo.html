@@ -211,28 +211,23 @@
   </style>
   
   <script>
-    // JavaScript to toggle visibility based on screen width
-    window.addEventListener('resize', function () {
-      var iframe = document.getElementById('game-iframe');
-      var mobileMessage = document.querySelector('.mobile-message');
 
-      if (window.innerWidth <= 600) {
-        iframe.style.display = 'none';
-        mobileMessage.style.display = 'block';
-      } else if (window.innerWidth > 600) {
-        iframe.style.display = 'block';
-        mobileMessage.style.display = 'none';
-      }
-    });
+  function toggleVisibility() {
+    var iframe = document.getElementById('game-iframe');
+    var mobileMessage = document.querySelector('.mobile-message');
 
-    // Initial check on page load
     if (window.innerWidth <= 600) {
-        iframe.style.display = 'none';
-        mobileMessage.style.display = 'block';
-      } else if (window.innerWidth > 600) {
-        iframe.style.display = 'block';
-        mobileMessage.style.display = 'none';
-      }
+      iframe.style.display = 'none';
+      mobileMessage.style.display = 'block';
+    } else {
+      iframe.style.display = 'block';
+      mobileMessage.style.display = 'none';
+    }
+  }
+
+  window.addEventListener('resize', toggleVisibility);
+
+  window.addEventListener('load', toggleVisibility);
   </script>
 
 </head>
