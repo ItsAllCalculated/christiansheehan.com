@@ -2,68 +2,102 @@
 <html>
 
 <head>
-<title>you can speak now</title>
-<link rel="shortcut icon" href="https://christiansheehan.com/images/favicon.png">
+    <title>Poetry</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+        body {
+            font-family: 'Sometype Mono', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
 
-body {
-    font-family: 'Sometype Mono', sans-serif;
-    background-color: black;
-    color: white;
-    margin: 0;
-}
+        nav {
+            background-color: #242424;
+            padding: 7px 20px;
+            display: flex;
+            align-items: center;
+        }
 
-nav {
-    background-color: #242424;
-    padding: 7px 20px;
-    display: flex;
-    align-items: center;
-}
+        .home-link {
+            margin-top: 5px;
+        }
 
-.home-link {
-    margin-top: 5px;
-}
+        .home-link:hover {
+            opacity: 0.7;
+        }
 
-.home-link:hover {
-    opacity: 0.7;
-}
+        .title {
+            font-size: 15px;
+            margin-left: 20px;
+            margin-right: auto;
+            align-items: center;
+            text-align: left;
+        }
 
-.title {
-    align-items: center;
-    text-align: left;
-    font-size: 15px;
-    margin-left: 20px;
-}
+        .container {
+            font-size: 15px;
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.poem {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 15px;
-}
-</style>
+        .link-list {
+            padding: 0;
+        }
+
+        .link-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: white;
+        }
+
+        .link:hover {
+            opacity: 0.7;
+        }
+
+        .date {
+            margin-left: 150px;
+            color: white;
+            display: flex;
+        }
+
+        .dot {
+            position: absolute;
+            right: calc(50%);
+        }
+
+        @media (max-width: 600px) {
+            .date {
+                margin-left: 50px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<nav>
-    <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="https://christiansheehan.com/images/favicon.png"/></a>
-    <a class="title">you can speak now</a>
-</nav>
-<div class="poem">
-    hey<br>
-    let's pause<br>
-    and go back and before<br>
-    were you going to say something?<br>
-    what was it?<br>
-    I'm sorry for cutting you off<br>
-    I will let you finish<br>
-    ears open<br>
-    arms open<br>
-    heart open<br>
-    you can speak now<br>
-</div>
+    <nav>
+        <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
+        <a class="title">Poetry</a>
+    </nav>
+    <center>
+        <div class="container">
+            <ul class="link-list">
+                <li><a href="poems/3" class="link">you can speak now</a><span class="dot">•</span><span class="date"> February 8, 2024</span></li>
+                <li><a href="#" class="link">The Traveller</a><span class="dot">•</span><span class="date">November 29, 2023</span></li>
+                <li><a href="#" class="link">Ode to Mints</a><span class="dot">•</span><span class="date">November 14, 2023</span></li>
+            </ul>
+        </div>
 </body>
 
 </html>
