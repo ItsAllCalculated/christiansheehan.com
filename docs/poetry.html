@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon.png">
   <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
- <style>
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+
     body {
       font-family: 'Sometype Mono', sans-serif;
       background-color: black;
@@ -30,15 +31,11 @@
       margin-top: 2px;
     }
 
-
-
     /* Style for the Home link */
     .home-link {
       margin-right: 5px;
       margin-top: 5px;
       margin-left: 2px;
-      /* Minimal margin between the home link and music link */
-       /* Add transition effect */
     }
 
     /* Hover style for the Home link */
@@ -52,7 +49,7 @@
       text-align: left;
       font-size: 15px;
       margin-left: 15px;
-      margin-right: auto; /* Minimal margin between the home link and music link */
+      margin-right: auto;
       cursor: text;
     }
 
@@ -91,7 +88,7 @@
 
     .container {
       position: relative;
-      width: 250px;
+      width: 100%;
       margin-top: 25px;
       margin: 25px -8px;
       display: flex;
@@ -103,7 +100,7 @@
       width: 85%;
       height: auto;
       display: block;
-      margin: 0 auto; /* Center the image horizontally */
+      margin: 0 auto;
       transition: 0s;
     }
 
@@ -114,19 +111,6 @@
       transform: translate(-50%, -50%);
       opacity: 0;
       color: white;
-      white-space: nowrap; /* Ensure the text stays in one line */
-    }
-
-    .date {
-      position: absolute;
-      top: 90%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 15px;
-      opacity: 0;
-      transition: 0s;
-
       white-space: nowrap;
     }
 
@@ -141,45 +125,60 @@
     .container:hover .date {
       opacity: 1;
     }
+
     .link-list {
-  list-style-type: none;
-  padding: 0;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .link-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: white;
+    }
+.link:hover{
+opacity:0.7;
 }
 
-.link-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.link {
-  text-decoration: none;
-  color: white;
-}
-
-.date {
-  color: white;
+    .date {
+      margin-left: 150px; /* Adjusted margin for better spacing */
+      color: white;
+      display: flex; /* Added to align the dots vertically */
+      align-items: center; /* Added to align the dots vertically */
+    }
+.dot {
+  position: absolute;
+  right: calc(50%);
+ /* Adjusted position for alignment */
+  
 }
 
     /* Media Query for smaller screens */
     @media (max-width: 600px) {
       .image-container {
         flex-direction: column;
-        margin-top:15px;
+        margin-top: 15px;
       }
+
       .image {
-      width: 100%;
-    }
-    .container {
-      position: relative;
-      width: 250px;
-      margin-top: 25px;
-      margin: 10px -8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        width: 100%;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        margin-top: 25px;
+        margin: 10px -8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -190,14 +189,18 @@
     <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
     <a class="nav-link music-link">Poetry</a>
     <div class="streaming-links">
-     
+
     </div>
   </nav>
+<center>
   <div class="container">
     <ul class="link-list">
-      <li><a href="#" class="link">Link 1</a><span class="date">February 15, 2024</span></li>
-      <li><a href="#" class="link">Link 2</a><span class="date">February 14, 2024</span></li>
-      <li><a href="#" class="link">Link 3</a><span class="date">February 13, 2024</span></li>
-      <!-- Add more links as needed -->
+      <li><a href="#" class="link">you can speak now</a><span class="dot">•</span><span class="date"> February 8, 2024</span></li>
+      <li><a href="#" class="link">The Traveller</a><span class="dot">•</span><span class="date">November 29, 2023</span></li>
+      <li><a href="#" class="link">Ode to Mints</a><span class="dot">•</span><span class="date">November 14, 2023</span></li>
     </ul>
   </div>
+</body>
+
+</html>
+
