@@ -2,215 +2,68 @@
 <html>
 
 <head>
-  <title>you can speak now</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="https://christiansheehan.com/images/favicon.png">
-  <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+<title>you can speak now</title>
+<link rel="shortcut icon" href="https://christiansheehan.com/images/favicon.png">
 
-    body {
-      font-family: 'Sometype Mono', sans-serif;
-      background-color: black;
-      color: white;
-      margin: 0;
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
 
-    nav {
-      justify-content: space-between;
-      background-color: #242424;
-      padding: 7px 20px;
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-link {
-      color: white;
-      text-decoration: none;
-      align-items: left;
-      margin-top: 2px;
-    }
-
-    /* Style for the Home link */
-    .home-link {
-      margin-right: 5px;
-      margin-top: 5px;
-      margin-left: 2px;
-    }
-
-    /* Hover style for the Home link */
-    .home-link:hover {
-      filter: brightness(70%);
-    }
-
-    /* Style for the Music link */
-    .music-link {
-      align-items: center;
-      text-align: left;
-      font-size: 15px;
-      margin-left: 15px;
-      margin-right: auto;
-      cursor: text;
-    }
-
-    .streaming-links {
-      text-align: right;
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-bottom: 0px;
-    }
-
-    .streaming-links a {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 1;
-    }
-
-    .streaming-links a:hover {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 0.7;
-    }
-
-    .streaming-links i {
-      font-size: 1.4em;
-    }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .container {
-      position: relative;
-      width: 100%;
-      margin-top: 25px;
-      margin: 25px -8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .image {
-      width: 85%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      transition: 0s;
-    }
-
-    .text {
-      left: 50%;
-      position: absolute;
-      top: 80%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      color: white;
-      white-space: nowrap;
-    }
-
-    .container:hover .image {
-      filter: brightness(70%);
-    }
-
-    .container:hover .text {
-      opacity: 1;
-    }
-
-    .container:hover .date {
-      opacity: 1;
-    }
-
-    .link-list {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .link-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .link {
-      text-decoration: none;
-      color: white;
-    }
-.link:hover{
-opacity:0.7;
+body {
+    font-family: 'Sometype Mono', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
 }
 
-    .date {
-      margin-left: 150px; /* Adjusted margin for better spacing */
-      color: white;
-      display: flex; /* Added to align the dots vertically */
-      align-items: center; /* Added to align the dots vertically */
-    }
-.dot {
-  position: absolute;
-  right: calc(50%);
- /* Adjusted position for alignment */
+nav {
+    background-color: #242424;
+    padding: 7px 20px;
+    display: flex;
+    align-items: center;
 }
+
+.home-link {
+    margin-top: 5px;
+}
+
+.home-link:hover {
+    opacity: 0.7;
+}
+
+.title {
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
 .poem {
-    margin-top:20px;
-    margin-left:20px;
-    margin-right:20px;
-    font-size:15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;
 }
-
-    /* Media Query for smaller screens */
-    @media (max-width: 600px) {
-      .image-container {
-        flex-direction: column;
-        margin-top: 15px;
-      }
-
-      .image {
-        width: 100%;
-      }
-
-      .container {
-        position: relative;
-        width: 100%;
-        margin-top: 25px;
-        margin: 10px -8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
-
-  <nav>
+<nav>
     <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="https://christiansheehan.com/images/favicon.png" /></a>
-    <a class="nav-link music-link">you can speak now</a>
-    <div class="streaming-links">
-
-    </div>
-  </nav>
-  <div class="poem">
-  hey<br>
-  let's pause<br>
-  and go back and before<br>
-  were you going to say something?<br>
-  what was it?<br>
-  I'm sorry for cutting you off<br>
-  I will let you finish<br>
-  ears open<br>
-  arms open<br>
-  heart open<br>
-  you can speak now<br>
+    <a class="title">you can speak now</a>
+</nav>
+<div class="poem">
+    hey<br>
+    let's pause<br>
+    and go back and before<br>
+    were you going to say something?<br>
+    what was it?<br>
+    I'm sorry for cutting you off<br>
+    I will let you finish<br>
+    ears open<br>
+    arms open<br>
+    heart open<br>
+    you can speak now<br>
 </div>
 </body>
 
 </html>
-
