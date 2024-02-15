@@ -2,9 +2,9 @@
 <html>
 
 <head>
-  <title>you can speak now</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="https://christiansheehan.com/images/favicon.png">
+  <title>Poetry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <link rel="shortcut icon" href="images/favicon.png">
   <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
@@ -87,9 +87,10 @@
     }
 
     .container {
+font-size:15px;
       position: relative;
       width: 100%;
-      margin-top: 25px;
+      margin-top: 20px;
       margin: 25px -8px;
       display: flex;
       flex-direction: column;
@@ -141,6 +142,7 @@
     .link {
       text-decoration: none;
       color: white;
+      white-space: nowrap;
     }
 .link:hover{
 opacity:0.7;
@@ -149,6 +151,7 @@ opacity:0.7;
     .date {
       margin-left: 150px; /* Adjusted margin for better spacing */
       color: white;
+      white-space: nowrap;
       display: flex; /* Added to align the dots vertically */
       align-items: center; /* Added to align the dots vertically */
     }
@@ -156,14 +159,19 @@ opacity:0.7;
   position: absolute;
   right: calc(50%);
  /* Adjusted position for alignment */
-}
-.poem {
-    margin-top:20px;
-    margin-left:20px;
+  
 }
 
     /* Media Query for smaller screens */
     @media (max-width: 600px) {
+    .date {
+      margin-left: 50px; /* Adjusted margin for better spacing */
+      color: white;
+      white-space: nowrap;
+      display: flex; /* Added to align the dots vertically */
+      align-items: center; /* Added to align the dots vertically */
+    }
+
       .image-container {
         flex-direction: column;
         margin-top: 15px;
@@ -175,7 +183,7 @@ opacity:0.7;
 
       .container {
         position: relative;
-        width: 100%;
+        
         margin-top: 25px;
         margin: 10px -8px;
         display: flex;
@@ -190,25 +198,19 @@ opacity:0.7;
 
   <nav>
     <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
-    <a class="nav-link music-link">you can speak now</a>
+    <a class="nav-link music-link">Poetry</a>
     <div class="streaming-links">
 
     </div>
   </nav>
-  <div class="poem">
-  hey<br>
-  let's pause<br>
-  and go back and before<br>
-  were you going to say something?<br>
-  what was it?<br>
-  I'm sorry for cutting you off<br>
-  I will let you finish<br>
-  ears open<br>
-  arms open<br>
-  heart open<br>
-  you can speak now<br>
-</div>
+<center>
+  <div class="container">
+    <ul class="link-list">
+      <li><a href="poems/3" class="link">you can speak now</a><span class="dot">•</span><span class="date"> February 8, 2024</span></li>
+      <li><a href="#" class="link">The Traveller</a><span class="dot">•</span><span class="date">November 29, 2023</span></li>
+      <li><a href="#" class="link">Ode to Mints</a><span class="dot">•</span><span class="date">November 14, 2023</span></li>
+    </ul>
+  </div>
 </body>
 
 </html>
-
