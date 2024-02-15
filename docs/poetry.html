@@ -2,212 +2,101 @@
 <html>
 
 <head>
-  <title>Poetry</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="images/favicon.png">
-  <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+    <title>Poetry</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
 
-    body {
-      font-family: 'Sometype Mono', sans-serif;
-      background-color: black;
-      color: white;
-      margin: 0;
-    }
+        body {
+            font-family: 'Sometype Mono', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
 
-    nav {
-      justify-content: space-between;
-      background-color: #242424;
-      padding: 7px 20px;
-      display: flex;
-      align-items: center;
-    }
+        nav {
+            background-color: #242424;
+            padding: 7px 20px;
+            display: flex;
+            align-items: center;
+        }
 
-    .nav-link {
-      color: white;
-      text-decoration: none;
-      align-items: left;
-      margin-top: 2px;
-    }
+        .home-link {
+            margin-top: 5px;
+        }
 
-    /* Style for the Home link */
-    .home-link {
-      margin-right: 5px;
-      margin-top: 5px;
-      margin-left: 2px;
-    }
+        .home-link:hover {
+            opacity: 0.7;
+        }
 
-    /* Hover style for the Home link */
-    .home-link:hover {
-      filter: brightness(70%);
-    }
+        .title {
+            font-size: 15px;
+            margin-left: 20px;
+            margin-right: auto;
+            align-items: center;
+            text-align: left;
+        }
 
-    /* Style for the Music link */
-    .music-link {
-      align-items: center;
-      text-align: left;
-      font-size: 15px;
-      margin-left: 15px;
-      margin-right: auto;
-      cursor: text;
-    }
+        .container {
+            font-size: 15px;
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .streaming-links {
-      text-align: right;
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-bottom: 0px;
-    }
+        .link-list {
+            padding: 0;
+        }
 
-    .streaming-links a {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 1;
-    }
+        .link-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
 
-    .streaming-links a:hover {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 0.7;
-    }
+        .link {
+            text-decoration: none;
+            color: white;
+        }
 
-    .streaming-links i {
-      font-size: 1.4em;
-    }
+        .link:hover {
+            opacity: 0.7;
+        }
 
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        .date {
+            margin-left: 150px;
+            color: white;
+            display: flex;
+        }
 
-    .container {
-font-size:15px;
-      position: relative;
-      width: 100%;
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        .dot {
+            position: absolute;
+            right: calc(50%);
+        }
 
-    .image {
-      width: 85%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      transition: 0s;
-    }
-
-    .text {
-      left: 50%;
-      position: absolute;
-      top: 80%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      color: white;
-      white-space: nowrap;
-    }
-
-    .container:hover .image {
-      filter: brightness(70%);
-    }
-
-    .container:hover .text {
-      opacity: 1;
-    }
-
-    .container:hover .date {
-      opacity: 1;
-    }
-
-    .link-list {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .link-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .link {
-      text-decoration: none;
-      color: white;
-      white-space: normal;
-    }
-.link:hover{
-opacity:0.7;
-}
-
-    .date {
-      margin-left: 150px; /* Adjusted margin for better spacing */
-      color: white;
-      white-space: nowrap;
-      display: flex; /* Added to align the dots vertically */
-      align-items: center; /* Added to align the dots vertically */
-    }
-.dot {
-  position: absolute;
-  right: calc(50%);
- /* Adjusted position for alignment */
-  
-}
-
-    /* Media Query for smaller screens */
-    @media (max-width: 600px) {
-    .date {
-      margin-left: 50px; /* Adjusted margin for better spacing */
-      color: white;
-      white-space: nowrap;
-      display: flex; /* Added to align the dots vertically */
-      align-items: center; /* Added to align the dots vertically */
-    }
-
-      .image-container {
-        flex-direction: column;
-        margin-top: 15px;
-      }
-
-      .image {
-        width: 100%;
-      }
-
-      .container {
-        position: relative;
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+        @media (max-width: 600px) {
+            .date {
+                margin-left: 50px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-  <nav>
-    <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
-    <a class="nav-link music-link">Poetry</a>
-    <div class="streaming-links">
-
-    </div>
-  </nav>
-<center>
-  <div class="container">
-    <ul class="link-list">
-      <li><a href="poems/3" class="link">you can speak now</a><span class="dot">•</span><span class="date"> February 8, 2024</span></li>
-      <li><a href="#" class="link">The Traveller</a><span class="dot">•</span><span class="date">November 29, 2023</span></li>
-      <li><a href="#" class="link">Ode to Mints</a><span class="dot">•</span><span class="date">November 14, 2023</span></li>
-    </ul>
-  </div>
+    <nav>
+        <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
+        <a class="title">Poetry</a>
+    </nav>
+    <center>
+        <div class="container">
+            <ul class="link-list">
+                <li><a href="poems/3" class="link">you can speak now</a><span class="dot">•</span><span class="date"> February 8, 2024</span></li>
+                <li><a href="#" class="link">The Traveller</a><span class="dot">•</span><span class="date">November 29, 2023</span></li>
+                <li><a href="#" class="link">Ode to Mints</a><span class="dot">•</span><span class="date">November 14, 2023</span></li>
+            </ul>
+        </div>
 </body>
 
 </html>
