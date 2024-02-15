@@ -141,6 +141,26 @@
     .container:hover .date {
       opacity: 1;
     }
+    .link-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.link-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.date {
+  color: white;
+}
 
     /* Media Query for smaller screens */
     @media (max-width: 600px) {
@@ -173,3 +193,11 @@
      
     </div>
   </nav>
+  <div class="container">
+    <ul class="link-list">
+      <li><a href="#" class="link">Link 1</a><span class="date">February 15, 2024</span></li>
+      <li><a href="#" class="link">Link 2</a><span class="date">February 14, 2024</span></li>
+      <li><a href="#" class="link">Link 3</a><span class="date">February 13, 2024</span></li>
+      <!-- Add more links as needed -->
+    </ul>
+  </div>
