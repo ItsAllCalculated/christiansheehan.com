@@ -1,106 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Live HTML Editor</title>
-  <link rel="shortcut icon" href="images/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
-    body {
+    <title>Live HTML Editor</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+
+        body {
             font-family: 'Sometype Mono', sans-serif;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #242424;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #242424;
+        }
+
+        nav {
+            background-color: #242424;
+            padding: 7px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-link {
+            margin-top: 5px;
+        }
+
+        .home-link:hover {
+            opacity: 0.7;
+        }
+
+        .title {
+            text-align: left;
+            font-size: 15px;
+            margin-left: 20px;
+            margin-right: auto;
+        }
+
+        .links {
+            text-align: right;
             margin: 0;
             display: flex;
-            flex-direction: column;
-            height: 100vh;
-            font-size: 15px;
+            justify-content: flex-end;
+            align-items: flex-end;
         }
-/* width */
-      ::-webkit-scrollbar {
-         width: 5px;
-      }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background:black;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #242424; 
-  border-radius: 5px;
-}
+        .links a {
+            margin: 0 12px;
+            color: white;
+            text-decoration: none;
+            opacity: 1;
+        }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #242424; 
-}
-    nav {
-      justify-content: space-between;
-      background-color: #242424;
-      padding: 7px 20px;
-      display: flex;
-      align-items: center;
-    }
+        .links a:hover {
+            margin: 0 12px;
+            color: white;
+            text-decoration: none;
+            opacity: 0.7;
+            cursor: pointer;
+        }
 
-    .nav-link {
-      color: white;
-      text-decoration: none;
-      align-items: left;
-      margin-top: 2px;
-    }
+        .links i {
+            font-size: 1.4em;
+        }
 
-    /* Style for the Home link */
-    .home-link {
-      margin-right: 5px;
-      margin-top: 5px;
-      margin-left: 2px;
-      /* Minimal margin between the home link and music link */
-       /* Add transition effect */
-    }
-
-    /* Hover style for the Home link */
-    .home-link:hover {
-      filter: brightness(70%);
-    }
-    .music-link {
-      align-items: center;
-      text-align: left;
-      font-size: 15px;
-      margin-left: 15px;
-      margin-right: auto; /* Minimal margin between the home link and music link */
-      cursor: text;
-    }
-
-    .streaming-links {
-      text-align: right;
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-bottom: 0px;
-    }
-
-    .streaming-links a {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 1;
-    }
-
-    .streaming-links a:hover {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 0.7;
-      cursor: pointer;
-    }
-
-    .streaming-links i {
-      font-size: 1.4em;
-    }
-
-    #editor {
+        #editor {
             width: 100%;
             box-sizing: border-box;
             padding: 10px;
@@ -110,63 +92,55 @@
             color: white;
             margin: 0;
             flex-shrink: 0;
-            caret-color: white; /* Set the caret color to white */
-            outline: none; 
-            /* Remove the default focus outline */
+            caret-color: white; 
+            outline: none;
         }
 
         #output {
-            flex-grow: 1; /* Take up the remaining vertical space */
+            flex-grow: 1;
             width: 100%;
             border: none;
-            background-color:white; /* Remove border for iframe */
+            background-color: white;
         }
-  </style>
+    </style>
 </head>
 
 <body>
-
     <nav>
-      <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
-      <a class="nav-link music-link">Live HTML Editor</a>
-      <div class="streaming-links">
-        <a onclick="toggleFullscreen()">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
+        <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
+        <a class="title">Live HTML Editor</a>
+        <div class="links">
+            <a onclick="toggleFullscreen()">
+                <i class="fas fa-expand"></i>
+            </a>
+        </div>
     </nav>
     <div spellcheck="false" id="editor" contenteditable="true" oninput="updateOutput()" onclick="clearPlaceholder()">
         Type your code here
-      </div>
+    </div>
     <iframe id="output" sandbox="allow-same-origin allow-scripts"></iframe>
     <script>
         function updateOutput() {
-          var editorContent = document.getElementById('editor').innerText;
-          var outputFrame = document.getElementById('output');
-          var outputDocument = outputFrame.contentWindow.document;
-    
-          outputDocument.open();
-          outputDocument.write(editorContent);
-          outputDocument.close();
+            var editorContent = document.getElementById('editor').innerText;
+            var outputFrame = document.getElementById('output');
+            var outputDocument = outputFrame.contentWindow.document;
+            outputDocument.open();
+            outputDocument.write(editorContent);
+            outputDocument.close();
         }
-    
-        function toggleFullscreen() {
-          var editor = document.getElementById('editor');
-          var output = document.getElementById('output');
 
-    
-          // Toggle the visibility of the editor
-          editor.style.display = editor.style.display === 'none' ? 'block' : 'none';
+        function toggleFullscreen() {
+            var editor = document.getElementById('editor');
+            var output = document.getElementById('output');
+            editor.style.display = editor.style.display === 'none' ? 'block' : 'none';
         }
 
         function clearPlaceholder() {
-    var editor = document.getElementById('editor');
-    if (editor.innerText === 'Type your code here') {
-      editor.innerText = '';
-    }
-  }
-      </script>
-  
-  </body>
-  
-  </html>
+            var editor = document.getElementById('editor');
+            if (editor.innerText === 'Type your code here') {
+                editor.innerText = '';
+            }
+        }
+    </script>
+</body>
+</html>
