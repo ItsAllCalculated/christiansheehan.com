@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Christian Sheehan</title>
     <meta name="description" content="before real estate was real">
@@ -11,7 +10,6 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 </head>
-
 <body>
     <a href="/catwithascarf" title="Cat With a Scarf">
         <img class="paintbrush" src="images/paintbrush.png" ontouchstart="changeImage()" ontouchend="restoreImage()" onmouseover="changeImage()" onmouseout="restoreImage()" />
@@ -28,8 +26,10 @@
         <li><a title="Music" href="/music"><i class="fa fa-music fa-2x"></i></a></li>
         <li><a title="Projects" href="/projects"><i class="fa fa-code fa-2x"></i></a></li>
     </ul>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
+
         body {
             font-family: 'Sometype Mono', sans-serif;
             background-color: #000000;
@@ -37,17 +37,21 @@
             overflow-y: hidden;
             color: white;
         }
+
         @media (max-width: 600px) {
-   .paintbrush{
-    top:33%;
-   }
-   .nav {
-    top:67%;
-   }
-   #emailFormContainer {
-    top:62%;
+            .paintbrush {
+                top: 33%;
+            }
+
+            .nav {
+                top: 67%;
+            }
+
+            #emailFormContainer {
+                top: 62%;
+            }
         }
-}
+
         .paintbrush {
             position: absolute;
             width: 275px;
@@ -63,8 +67,6 @@
         }
 
         .nav {
-            color: #fff;
-            list-style: none;
             padding: 25px 0 25px 0;
             position: absolute;
             top: 66%;
@@ -80,7 +82,7 @@
         }
 
         .nav>li>a {
-            color: #fff;
+            color: white;
         }
 
         .nav>li>a:hover {
@@ -109,7 +111,7 @@
             color: white;
             text-decoration: none;
             transition: color 0s;
-            font-size:15px;
+            font-size: 15px;
         }
 
         .emaillink:hover {
@@ -120,7 +122,6 @@
         .copy {
             color: white;
             text-decoration: none;
-            transition: color 0s;
         }
 
         .copy:hover {
@@ -134,35 +135,4 @@
             document.querySelector('.paintbrush').src = 'images/catwithascarf.jpg';
             document.querySelector('.paintbrush').classList.add('active');
         }
-
-        function restoreImage() {
-            document.querySelector('.paintbrush').src = 'images/paintbrush.png';
-            document.querySelector('.paintbrush').classList.remove('active');
-        }
-
-        function toggleEmailForm() {
-            var emailFormContainer = document.getElementById('emailFormContainer');
-            var emailForm = document.getElementById('emailForm');
-
-            if (emailFormContainer.classList.contains('hidden')) {
-                emailFormContainer.classList.remove('hidden');
-                emailForm.style.display = 'block';
-            } else {
-                emailFormContainer.classList.add('hidden');
-                emailForm.style.display = 'none';
-            }
-        }
-
-        function copyToClipboard() {
-            var emailAddress = document.getElementById('emailAddress');
-            var textarea = document.createElement('textarea');
-            textarea.value = emailAddress.textContent;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-        }
     </script>
-</body>
-
-</html>
