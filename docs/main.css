@@ -341,3 +341,9 @@ nav {
       align-items: center;
     }
   }
+
+/*Poetry*/
+.poem {
+    margin: 20px;
+    line-height: 1.5;
+}
