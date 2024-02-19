@@ -21,7 +21,7 @@
         <a title="Copy" class="copy" onclick="copyToClipboard()" style="margin-left: 10px;"><i class="fa-regular fa-copy fa-xl"></i></a>
     </div>
 
-    <ul class="nav">
+    <ul class="homenav">
         <li><a title="YouTube" target="_blank" href="https://youtube.com/christiansheehan"><i class="fa fa-youtube-play fa-2x"></i></a></li>
         <li><a class="Email" title="Email" onclick="toggleEmailForm()"><i class="fa fa-envelope fa-2x"></i></a></li>
         <li><a title="Music" href="/music"><i class="fa fa-music fa-2x"></i></a></li>
@@ -34,105 +34,8 @@
     </ul>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
-
         body {
-            font-family: 'Sometype Mono', sans-serif;
-            background-color: #000000;
-            overflow-x: hidden;
             overflow-y: hidden;
-            color: white;
-        }
-
-        @media (max-width: 600px) {
-            .paintbrush {
-                top: 33%;
-            }
-
-            .nav {
-                top: 67%;
-            }
-
-            #emailFormContainer {
-                top: 62%;
-            }
-        }
-
-        .paintbrush {
-            position: absolute;
-            width: 275px;
-            height: 275px;
-            top: 34%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-
-        .Email {
-            cursor: pointer;
-        }
-
-        .nav {
-            padding: 25px 0 25px 0;
-            position: absolute;
-            top: 66%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            white-space: nowrap;
-        }
-
-        .nav>li {
-            display: inline-block;
-            padding: 0 18px 0 18px;
-        }
-
-        .nav>li>a {
-            color: white;
-        }
-
-        .nav>li>a:hover {
-            opacity: 0.7;
-        }
-
-        #emailFormContainer {
-            text-align: center;
-            position: absolute;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            top: 61%;
-            white-space: nowrap;
-        }
-
-        #emailForm {
-            display: none;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .emaillink {
-            color: white;
-            text-decoration: none;
-            transition: color 0s;
-            font-size: 15px;
-        }
-
-        .emaillink:hover {
-            opacity: 0.7;
-            cursor: pointer;
-        }
-
-        .copy {
-            color: white;
-            text-decoration: none;
-        }
-
-        .copy:hover {
-            opacity: 0.7;
-            cursor: pointer;
         }
     </style>
 </body>
