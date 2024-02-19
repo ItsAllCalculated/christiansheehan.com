@@ -6,99 +6,7 @@
     <meta name="robots" content="noindex, nofollow">
     <link rel="shortcut icon" href="images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
-
-        body {
-            font-family: 'Sometype Mono', sans-serif;
-            background-color: black;
-            color: white;
-            font-size: 15px;
-            margin: 0;
-        }
-
-        ::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: black;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #242424;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #242424;
-        }
-
-        nav {
-            background-color: #242424;
-            padding: 7px 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .home-link {
-            margin-top: 5px;
-        }
-
-        .home-link:hover {
-            opacity: 0.7;
-        }
-
-        .title {
-            margin-left: 20px;
-            margin-right: auto;
-            align-items: center;
-            text-align: left;
-        }
-
-        .container {
-            margin-top: 8px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .link-list {
-            padding: 0;
-        }
-
-        .link-list li {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 7.5px;
-        }
-
-        .link {
-            text-decoration: none;
-            color: white;
-        }
-
-        .link:hover {
-            opacity: 0.7;
-        }
-
-        .date {
-            margin-left: 200px;
-            color: white;
-            display: flex;
-        }
-
-        .dot {
-            position: absolute;
-            right: calc(50%);
-        }
-
-        @media (max-width: 600px) {
-            .date {
-                margin-left: 50px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
@@ -107,12 +15,12 @@
         <a class="title">Poetry</a>
     </nav>
     <center>
-        <div class="container">
+        <div class="linkcontainer">
             <ul class="link-list">
-                <li><a href="poems/4" class="link">if I had your eyes</a><span class="dot">•</span><span class="date">Feb 19, 2024</span></li>
-                <li><a href="poems/3" class="link">you can speak now</a><span class="dot">•</span><span class="date">Feb 8, 2024</span></li>
-                <li><a href="poems/2" class="link">The Traveler</a><span class="dot">•</span><span class="date">Nov 29, 2023</span></li>
-                <li><a href="poems/1" class="link">Ode to Mints</a><span class="dot">•</span><span class="date">Nov 14, 2023</span></li>
+                <li><a href="poems/4" class="link">if I had your eyes</a><span class="dot">•</span><span class="linkdate">Feb 19, 2024</span></li>
+                <li><a href="poems/3" class="link">you can speak now</a><span class="dot">•</span><span class="linkdate">Feb 8, 2024</span></li>
+                <li><a href="poems/2" class="link">The Traveler</a><span class="dot">•</span><span class="linkdate">Nov 29, 2023</span></li>
+                <li><a href="poems/1" class="link">Ode to Mints</a><span class="dot">•</span><span class="linkdate">Nov 14, 2023</span></li>
             </ul>
         </div>
 </body>
