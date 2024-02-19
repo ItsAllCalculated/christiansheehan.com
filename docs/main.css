@@ -230,6 +230,11 @@ nav {
     align-items: center;
   }
 
+  .linksection {
+    background-color: #242424;
+    height:100%;
+    }
+    
   .home-link {
     margin-top: 5px;
   }
