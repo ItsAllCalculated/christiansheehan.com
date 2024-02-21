@@ -101,13 +101,6 @@ body {
     opacity: 0.7;
     cursor: pointer;
 }
-    nav {
-      justify-content: space-between;
-      background-color: #242424;
-      padding: 5px 20px; /**/
-      display: flex;
-      align-items: center;
-    }
 
     .home-link {
       margin-top: 5px;
@@ -224,7 +217,7 @@ body {
 nav {
     justify-content: space-between;
     background-color: #242424;
-    padding: 7px 20px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
   }
