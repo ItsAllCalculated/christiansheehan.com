@@ -338,7 +338,6 @@ nav {
     .container {
       position: relative;
       width: 250px;
-      margin-top: 25px;
       margin: 10px -8px;
       display: flex;
       flex-direction: column;
