@@ -65,3 +65,25 @@ function toggleLink4(element) {
     });
     element.classList.toggle('active');
 }
+
+/*game*/
+
+window.addEventListener('resize', toggleVisibility);
+window.addEventListener('load', toggleVisibility);
+
+  function toggleVisibility() {
+    var iframe = document.getElementById('game-iframe');
+    var mobileMessage = document.querySelector('.mobile-message');
+
+    if (window.innerWidth <= 600) {
+      iframe.style.display = 'none';
+      mobileMessage.style.display = 'block';
+    } else {
+      iframe.style.display = 'block';
+      mobileMessage.style.display = 'none';
+    }
+  }
+
+  window.addEventListener('resize', toggleVisibility);
+
+  window.addEventListener('load', toggleVisibility);
