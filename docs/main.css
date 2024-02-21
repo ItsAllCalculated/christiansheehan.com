@@ -390,13 +390,14 @@ nav {
 .dot {
     position: absolute;
     right: calc(50%);
+    display: block;
 }
 
 @media (max-width: 600px) {
     .linkdate {
-        margin-left: 50px;
+        margin-left: 60px;
     }
-    .link {
-        width:40%;
+    .dot {
+        display: none;
     }
 }
