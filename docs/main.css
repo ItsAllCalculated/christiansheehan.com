@@ -9,6 +9,23 @@ body {
     font-size: 15px;
   }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background:black;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #242424; 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #242424; 
+}
+
 /*Home*/
 
   @media (max-width: 600px) {
