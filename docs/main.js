@@ -44,3 +44,10 @@ function toggleLink(element) {
     });
     element.classList.toggle('active');
 }
+
+function toggleLink2(element) {
+    document.querySelectorAll('.link-list').forEach(function (el) {
+      el.classList.remove('active');
+    });
+    element.classList.toggle('active');
+}
