@@ -233,7 +233,8 @@ nav {
   .linksection {
     background-color: #242424;
     height:100%;
-    }
+    line-height: 1.5;
+  }
     
   .home-link {
     margin-top: 5px;
@@ -359,7 +360,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.5;
 }
 
 .link-list {
