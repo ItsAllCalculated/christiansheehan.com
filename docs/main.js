@@ -37,3 +37,10 @@ function toggleActive(element) {
     });
     element.classList.toggle('active');
 }
+
+function toggleLink(element) {
+    document.querySelectorAll('.homenav').forEach(function (el) {
+      el.classList.remove('active');
+    });
+    element.classList.toggle('active');
+}
