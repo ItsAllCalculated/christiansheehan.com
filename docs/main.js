@@ -51,3 +51,10 @@ function toggleLink2(element) {
     });
     element.classList.toggle('active');
 }
+
+function toggleLink3(element) {
+    document.querySelectorAll('.hidden').forEach(function (el) {
+      el.classList.remove('active');
+    });
+    element.classList.toggle('active');
+}
