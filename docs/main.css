@@ -211,10 +211,6 @@ body {
     }
 
     @media (max-width: 600px) {
-      .image-container {
-        flex-direction: column;
-        margin-top: 8px;
-      }
       .image {
         width: 100%;
       }
@@ -337,10 +333,6 @@ nav {
   }
 
   @media (max-width: 600px) {
-    .image-container {
-      flex-direction: column;
-      margin-top: 8px;
-    }
     .image {
       width: 100%;
     }
@@ -419,6 +411,7 @@ nav {
   .image-container {
     flex-direction: column;
     margin-top: 8px;
+    margin-bottom:8px;
   }
 
   .image {
