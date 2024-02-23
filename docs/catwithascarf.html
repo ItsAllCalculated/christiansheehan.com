@@ -46,6 +46,7 @@ Cover art by Jaryn Lampe<br><br></div>
 	 font-weight: 100;
 	 background: #000;
 	 overflow: hidden;
+   display: flex;
 }
  body .card .current-song {
 	 display: flex;
@@ -433,9 +434,7 @@ var CardProfile = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/React.createElement("img", {
         title: "Cover art by Jaryn Lampe",
         src: "images/catwithascarf.jpg"
-      })), /*#__PURE__*/React.createElement("span", {
-        className: "song-name"
-      }, currentSong.name), /*#__PURE__*/React.createElement("div", {
+      })), currentSong.name), /*#__PURE__*/React.createElement("div", {
         className: "time"
       }, /*#__PURE__*/React.createElement("div", {
         className: "current-time"
