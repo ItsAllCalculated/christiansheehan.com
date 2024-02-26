@@ -439,12 +439,4 @@ nav {
     line-height: 1.5;
     font-size:15px;
   }
-  .link {
-    width:50%;
-    text-align:left;
-    margin-left:15px;
-  }
-  .linkdate {
-    width:35%;
-  }
 }
