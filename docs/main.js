@@ -74,13 +74,16 @@ window.addEventListener('load', toggleVisibility);
   function toggleVisibility() {
     var iframe = document.getElementById('game-iframe');
     var mobileMessage = document.querySelector('.mobile-message');
+    var fullscreen = document.querySelector('.fullscreen.btn');
 
     if (window.innerWidth <= 600) {
       iframe.style.display = 'none';
       mobileMessage.style.display = 'block';
+      fullscreen.style.display = 'none';
     } else {
       iframe.style.display = 'block';
       mobileMessage.style.display = 'none';
+      fullscreen.style.display = 'block';
     }
   }
 
