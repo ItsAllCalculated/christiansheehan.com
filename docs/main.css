@@ -442,6 +442,7 @@ nav {
   .link {
     width:50%;
     text-align:left;
+    margin-left:15px;
   }
   .linkdate {
     width:35%;
