@@ -31,7 +31,9 @@
       <br><br>
     </div>
     <br>
-
+    <button id="fullscreen-btn" onclick="toggleFullscreen()">
+      <i class="fas fa-expand"></i> Fullscreen
+    </button>
     <div class="linksection">
       <br>
       Help Bubbo find his hat in this 10 level platformer!<br>
@@ -40,6 +42,19 @@
       May 17, 2021<br>
       <br>
     </div>
+
+    <script>
+      function toggleFullscreen() {
+        var iframe = document.getElementById("game-iframe");
+        if (!document.fullscreenElement) {
+          iframe.requestFullscreen().catch(err => {
+            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+          });
+        } else {
+          document.exitFullscreen();
+        }
+      }
+    </script>
   </center>
 
 </body>
