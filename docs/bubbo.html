@@ -54,6 +54,16 @@
         } else {
           document.exitFullscreen();
         }
+        document.addEventListener("fullscreenchange", function () {
+    var iframe = document.getElementById("game-iframe");
+    if (document.fullscreenElement) {
+      iframe.style.width = "100vw";
+      iframe.style.height = "100vh";
+    } else {
+      iframe.style.width = "1280px"; // Set back to original width
+      iframe.style.height = "740px"; // Set back to original height
+    }
+  });
       }
     </script>
   </center>
