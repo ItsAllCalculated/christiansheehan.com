@@ -55,9 +55,6 @@ body {
     cursor: pointer;
 }
 
-nav {
-  position:sticky;
-}
 .foot {
   line-height: 1.5;
   background-color:#242424;
@@ -239,6 +236,10 @@ nav {
     padding: 5px 20px;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
   }
 
   .linksection {
