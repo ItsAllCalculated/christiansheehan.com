@@ -55,6 +55,10 @@ body {
     cursor: pointer;
 }
 
+nav {
+  position:sticky;
+}
+
 .homenav {
     padding: 25px 0 25px 0;
     position: absolute;
