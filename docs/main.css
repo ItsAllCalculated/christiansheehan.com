@@ -58,7 +58,10 @@ body {
 nav {
   position:sticky;
 }
-
+.foot {
+  line-height: 1.5;
+  background-color:#242424;
+}
 .homenav {
     padding: 25px 0 25px 0;
     position: absolute;
