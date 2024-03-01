@@ -414,7 +414,9 @@ nav {
 .mobile-message {
   display: none;
 }
-
+.foottext {
+  width:100%;
+}
 @media (max-width: 975px) {
   .image-container {
     flex-direction: column;
@@ -455,6 +457,10 @@ nav {
     padding: 5px 15px;
     display: flex;
     align-items: center;
+  }
+  .foottext {
+    width:90%;
+    max-width:387px;
   }
   .nav-links a {
     margin: 0 10px;
