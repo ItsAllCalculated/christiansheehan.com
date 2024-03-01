@@ -449,6 +449,10 @@ nav {
     line-height: 1.5;
     font-size:15px;
   }
+  .foottext {
+    width:90%;
+    max-width:387px;
+  }
 }
 @media (max-width: 650px) {
   nav {
@@ -458,10 +462,7 @@ nav {
     display: flex;
     align-items: center;
   }
-  .foottext {
-    width:90%;
-    max-width:387px;
-  }
+
   .nav-links a {
     margin: 0 10px;
     color: white;
