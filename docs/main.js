@@ -76,7 +76,7 @@ window.addEventListener('load', toggleVisibility);
     var mobileMessage = document.querySelector('.mobile-message');
     var fullscreen = document.querySelector('.fullscreen.btn');
 
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 975) {
       iframe.style.display = 'none';
       mobileMessage.style.display = 'block';
       fullscreen.style.display = 'none';
