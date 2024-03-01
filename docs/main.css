@@ -173,7 +173,7 @@ body {
       position: relative;
       width: 250px;
       margin-top: 25px;
-      margin: 20px -8px;
+      margin: 20px -10px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -222,7 +222,7 @@ body {
         position: relative;
         width: 250px;
         margin-top: 25px;
-        margin: 10px -8px;
+        margin: 10px -10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -297,7 +297,7 @@ nav {
     position: relative;
     width: 250px;
     margin-top: 25px;
-    margin: 20px -8px;
+    margin: 20px -10px;
     display: flex;
     flex-direction: column;
     align-items: center;
