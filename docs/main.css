@@ -238,6 +238,36 @@ nav {
     align-items: center;
   }
 
+  @media (max-width: 650px) {
+    nav {
+      justify-content: space-between;
+      background-color: #242424;
+      padding: 5px 15px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      opacity: 1;
+    }
+      .nav-links {
+        text-align: right;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-left: 15px;
+    }
+    .title {
+      align-items: center;
+      text-align: left;
+      margin-left: 15px;
+      margin-right: auto;
+  }
+  }
+  
   .linksection {
     background-color: #242424;
     height:100%;
