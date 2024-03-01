@@ -360,7 +360,7 @@ nav {
 }
 
 .linkcontainer {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -379,6 +379,7 @@ nav {
 .link {
     text-decoration: none;
     color: white;
+    text-align:left;
 }
 
 .link:hover {
@@ -389,6 +390,7 @@ nav {
     margin-left: 300px;
     color: white;
     display: flex;
+    white-space:nowrap;
 }
 
 .dot {
