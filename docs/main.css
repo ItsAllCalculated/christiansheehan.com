@@ -339,6 +339,10 @@ nav {
     opacity: 1;
   }
 
+  .container:active {
+    transform: scale(0.95);
+  }
+
   @media (max-width: 650px) {
     .image {
       width: 100%;
