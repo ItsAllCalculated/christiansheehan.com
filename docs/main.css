@@ -81,7 +81,7 @@ body {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    top: 61%;
+    margin-top:230px;
     white-space: nowrap;
 }
 
