@@ -115,12 +115,20 @@ body {
     cursor: pointer;
 }
 
+.copy:active {
+  transform: scale(0.95);
+}
+
     .home-link {
       margin-top: 5px;
     }
 
     .home-link:hover {
-      filter: brightness(70%);
+      opacity: 0.7;
+    }
+
+    .home-link:active {
+      transform: scale(0.95);
     }
 
     .nav-links {
