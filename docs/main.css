@@ -46,6 +46,12 @@ body {
 
 .paintbrush:active{
   transform: scale(0.95);
+  position: absolute;
+  width: 275px;
+  height: 275px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .Email {
