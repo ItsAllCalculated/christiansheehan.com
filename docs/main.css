@@ -27,25 +27,18 @@ body {
 
 /*Home*/
 
-  @media (max-width: 650px) {
-    .paintbrush {
-        top: 32%;
-    }
-
-    .homenav {
-        top: 68%;
-    }
-
-    #emailFormContainer {
-        top: 63%;
-    }
-}
+.home-container {
+  position:absolute;
+  top:35%;
+     left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  }
 
 .paintbrush {
     position: absolute;
     width: 275px;
     height: 275px;
-    top: 34%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -62,11 +55,11 @@ body {
 .homenav {
     padding: 25px 0 25px 0;
     position: absolute;
-    top: 66%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     white-space: nowrap;
+    margin-top:230px;
 }
 
 .homenav>li {
