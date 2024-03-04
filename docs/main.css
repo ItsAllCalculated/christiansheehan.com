@@ -29,15 +29,15 @@ body {
 
   @media (max-width: 650px) {
     .paintbrush {
-        top: 33%;
+        top: 32%;
     }
 
     .homenav {
-        top: 67%;
+        top: 68%;
     }
 
     #emailFormContainer {
-        top: 62%;
+        top: 63%;
     }
 }
 
