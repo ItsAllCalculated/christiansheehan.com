@@ -404,11 +404,7 @@ nav {
   width:100%;
 }
 @media (max-width: 975px) {
-  .image-container {
-    flex-direction: column;
-    margin-top: 8px;
-    margin-bottom:8px;
-  }
+
 
   .image {
     width: 100%;
@@ -436,7 +432,7 @@ nav {
     max-width:387px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 725px) {
   nav {
     justify-content: space-between;
     background-color: #242424;
@@ -444,7 +440,11 @@ nav {
     display: flex;
     align-items: center;
   }
-
+  .image-container {
+    flex-direction: column;
+    margin-top: 8px;
+    margin-bottom:8px;
+  }
   .nav-links a {
     margin: 0 10px;
     color: white;
