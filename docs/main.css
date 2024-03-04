@@ -431,10 +431,6 @@ nav {
     align-items: center;
   }
 
-  iframe {
-    display: none;
-  }
-
   .mobile-message {
     display: block;
     text-align: center;
