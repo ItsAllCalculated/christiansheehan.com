@@ -123,13 +123,6 @@ body {
       filter: brightness(70%);
     }
 
-    .title {
-      align-items: center;
-      text-align: left;
-      margin-left: 20px;
-      margin-right: auto;
-    }
-
     .nav-links {
       text-align: right;
       margin: 0;
@@ -252,6 +245,7 @@ nav {
     text-align: left;
     margin-left: 20px;
     margin-right: auto;
+    text-overflow:ellipsis;
   }
 
   .nav-links {
