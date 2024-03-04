@@ -44,6 +44,10 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.paintbrush:active{
+  transform: scale(0.95);
+}
+
 .Email {
     cursor: pointer;
 }
