@@ -182,12 +182,14 @@ body {
 
     .container {
       position: relative;
-      width: 220px;
+      width: 250px;
       margin-top: 25px;
+      margin: 20px -10px;
       display: flex;
+      flex-direction: column;
       align-items: center;
     }
-  
+
     .image {
       width: 85%;
       height: auto;
@@ -304,12 +306,13 @@ nav {
 
   .container {
     position: relative;
-    width: 220px;
+    width: 250px;
     margin-top: 25px;
+    margin: 20px -10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
-
 
   .image {
     width: 85%;
@@ -348,6 +351,21 @@ nav {
 
   .container:active {
     transform: scale(0.95);
+  }
+
+  @media (max-width: 650px) {
+    .image {
+      width: 100%;
+    }
+    .container {
+      position: relative;
+      width: 250px;
+      margin: 10px -8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top:10px;
+    }
   }
 
 /*Poetry*/
@@ -445,6 +463,16 @@ nav {
     width: 100%;
   }
   
+  .container {
+    position: relative;
+    width: 250px;
+    margin-top: 25px;
+    margin: 10px -8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .nav-links a {
     margin: 0 10px;
     color: white;
