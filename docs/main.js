@@ -1,10 +1,10 @@
 function changeImage() {
-    document.querySelector('.paintbrush').src = 'images/catwithascarf.jpg';
+    document.querySelector('.paintbrush').src = '/images/catwithascarf.jpg';
     document.querySelector('.paintbrush').classList.add('active');
 }
 
 function restoreImage() {
-    document.querySelector('.paintbrush').src = 'images/paintbrush.png';
+    document.querySelector('.paintbrush').src = '/images/paintbrush.png';
     document.querySelector('.paintbrush').classList.remove('active');
 }
 
