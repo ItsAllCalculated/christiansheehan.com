@@ -391,7 +391,7 @@ nav {
 .link-list li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7.5px;
+    margin-bottom: 8px;
 }
 
 .link {
