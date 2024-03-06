@@ -73,7 +73,8 @@ body {
 
 .homenav>li {
     display: inline-block;
-    padding: 0 15px 0 15px;
+    width:60px;
+    text-align:center;
 }
 
 .homenav>li>a {
@@ -133,7 +134,7 @@ body {
 
 .copy:active {
   font-size:14.25px;
-  margin-left:8.75px;
+  margin-left:8.99px;
 }
 
     .home-link {
