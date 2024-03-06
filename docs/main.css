@@ -29,7 +29,7 @@ body {
 
 .home-container {
   position:absolute;
-  top:35%;
+  top:37%;
      left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -68,7 +68,7 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     white-space: nowrap;
-    margin-top:230px;
+    margin-top:220px;
 }
 
 .homenav>li {
