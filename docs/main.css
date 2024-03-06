@@ -178,6 +178,9 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top:8px;
+      margin-bottom:8px;
+      flex-wrap:wrap;
     }
 
     .container {
@@ -233,7 +236,7 @@ body {
         position: relative;
         width: 250px;
         margin-top: 25px;
-        margin: 10px -10px;
+        margin: 8px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -308,7 +311,7 @@ nav {
     position: relative;
     width: 250px;
     margin-top: 25px;
-    margin: 20px -10px;
+    margin: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,7 +363,7 @@ nav {
     .container {
       position: relative;
       width: 250px;
-      margin: 10px -8px;
+      margin: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -458,6 +461,7 @@ nav {
     flex-direction: column;
     margin-top: 8px;
     margin-bottom:8px;
+    flex-wrap:wrap;
   }
   .image {
     width: 100%;
@@ -467,7 +471,7 @@ nav {
     position: relative;
     width: 250px;
     margin-top: 25px;
-    margin: 10px -8px;
+    margin: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
