@@ -37,8 +37,8 @@ body {
 
 .paintbrush {
     position: absolute;
-    width: 275px;
-    height: 275px;
+    width: 250px;
+    height: 250px;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -47,8 +47,6 @@ body {
 .paintbrush:active{
   transform: scale(0.95);
   position: absolute;
-  width: 275px;
-  height: 275px;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -63,7 +61,7 @@ body {
   background-color:#242424;
 }
 .homenav {
-    padding: 25px 0 25px 0;
+    padding: 20px 0 20px 0;
     position: absolute;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
@@ -74,7 +72,7 @@ body {
 
 .homenav>li {
     display: inline-block;
-    padding: 0 18px 0 18px;
+    padding: 0 15px 0 15px;
 }
 
 .homenav>li>a {
