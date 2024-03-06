@@ -194,7 +194,7 @@ body {
     }
 
     .image {
-      width: 85%;
+      width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -318,7 +318,7 @@ nav {
   }
 
   .image {
-    width: 85%;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
