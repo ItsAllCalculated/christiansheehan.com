@@ -45,7 +45,8 @@ body {
 }
 
 .paintbrush:active{
-  transform: scale(0.95);
+  width: 237.5px;
+  height: 237.5px;
   position: absolute;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
