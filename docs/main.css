@@ -189,7 +189,7 @@ body {
 
     .container {
       position: relative;
-      width: 250px;
+      width: 225px;
       margin-top: 25px;
       margin: 20px -10px;
       display: flex;
@@ -238,7 +238,7 @@ body {
       }
       .container {
         position: relative;
-        width: 250px;
+        width: 225px;
         margin-top: 25px;
         margin: 8px;
         display: flex;
@@ -313,7 +313,7 @@ nav {
 
   .container {
     position: relative;
-    width: 250px;
+    width: 225px;
     margin-top: 25px;
     margin: 8px;
     display: flex;
@@ -366,7 +366,7 @@ nav {
     }
     .container {
       position: relative;
-      width: 250px;
+      width: 225px;
       margin: 8px;
       display: flex;
       flex-direction: column;
@@ -473,7 +473,7 @@ nav {
   
   .container {
     position: relative;
-    width: 250px;
+    width: 225px;
     margin-top: 25px;
     margin: 8px;
     display: flex;
