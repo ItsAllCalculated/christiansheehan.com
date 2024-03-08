@@ -379,6 +379,7 @@ nav {
 .poem {
     margin: 20px;
     line-height: 1.5;
+    width:100%;
 }
 
 .linkcontainer {
@@ -449,6 +450,10 @@ nav {
     font-size:15px;
   }
   .foottext {
+    width:90%;
+    max-width:387px;
+  }
+  .poem {
     width:90%;
     max-width:387px;
   }
