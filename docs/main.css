@@ -455,7 +455,7 @@ nav {
   }
   .poem {
     width:90%;
-    max-width:387px;
+    max-width:800px;
   }
 }
 @media (max-width: 725px) {
