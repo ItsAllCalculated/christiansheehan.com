@@ -467,7 +467,6 @@ nav {
     align-items: center;
   }
   .image-container {
-    flex-direction: column;
     margin-top: 8px;
     margin-bottom:8px;
     flex-wrap:wrap;
