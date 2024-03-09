@@ -448,14 +448,16 @@ nav {
     color: white;
     line-height: 1.5;
     font-size:15px;
+    width:90%;
+    max-width:90%;
   }
   .foottext {
     width:90%;
-    max-width:800px;
+    max-width:90%;
   }
   .poem {
     width:90%;
-    max-width:800px;
+    max-width:90%;
   }
 }
 @media (max-width: 725px) {
