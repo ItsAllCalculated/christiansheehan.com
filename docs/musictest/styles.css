@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.player-container {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.playlist {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+button#playPauseBtn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+}
+
+button#playPauseBtn.playing {
+    background-color: #e74c3c;
+}
+
+.progress {
+    height: 10px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #3498db;
+}

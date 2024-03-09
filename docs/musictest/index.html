@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player-container">
+        <audio id="audioPlayer"></audio>
+        <div class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlistItems">
+                <li data-src="song1.mp3">Song 1</li>
+                <li data-src="song2.mp3">Song 2</li>
+                <li data-src="song3.mp3">Song 3</li>
+            </ul>
+        </div>
+        <div class="controls">
+            <button id="prevBtn">Previous</button>
+            <button id="playPauseBtn">Play</button>
+            <button id="skipBtn">Skip</button>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
