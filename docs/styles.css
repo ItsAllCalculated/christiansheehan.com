@@ -130,13 +130,7 @@ button#playPauseBtn.playing {
     .volume-control {
         display: flex; /* Show volume controls on larger screens */
     }
-    .player-container {
-        max-width: 400px;
-        width:90%;
-        line-height: 2.0333;
-        display:flex;
-        flex-direction:column;
-    }
+
 }
 
 @media (max-width: 768px) {
