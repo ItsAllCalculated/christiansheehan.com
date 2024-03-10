@@ -112,7 +112,17 @@ button#playPauseBtn.playing {
     margin-bottom:5px;
 /* Adjust as needed for spacing */
 }
+/* Volume controls */
+.volume-control {
+    display: none; /* Hide volume controls by default */
+}
 
+/* Media query to show volume controls on screens wider than 768px */
+@media screen and (min-width: 768px) {
+    .volume-control {
+        display: flex; /* Show volume controls on larger screens */
+    }
+}
 .duration {
     text-align: right;
     margin-right:5px;
