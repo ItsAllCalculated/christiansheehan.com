@@ -13,7 +13,7 @@ body {
     width:90%;
     line-height: 2.0333;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
 }
 
 
@@ -135,12 +135,19 @@ button#playPauseBtn.playing {
         width:90%;
         line-height: 2.0333;
         display:flex;
-        flex-direction:row;
+        flex-direction:column;
     }
 }
-.duration {
-    text-align: right;
-    margin-right:5px;
+
+@media (max-width: 768px) {
+
+    .player-container {
+        max-width: 400px;
+        width:90%;
+        line-height: 2.0333;
+        display:flex;
+        flex-direction:column;
+    }
 }
 
 .track-name {
