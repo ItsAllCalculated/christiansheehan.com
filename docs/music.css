@@ -176,6 +176,9 @@ button#playPauseBtn.playing {
         width: 95%;
         margin-top: 20px;
     }
+    .flex {
+        margin: 0;
+    }
     .controls {
         margin:0;
     }
