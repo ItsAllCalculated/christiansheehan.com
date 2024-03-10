@@ -16,17 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let isPaused = true;
     let isLooping = false;
      // Initialize volume status
-     let isMuted = false;
+    let isMuted = false;
 
      // Volume button click event listener
      volumeToggleBtn.addEventListener("click", function() {
          // Toggle mute status
          isMuted = !isMuted;
-         volumeToggleBtn.classList.toggle("muted");
          // Toggle volume icon and mute/unmute audio
          if (isMuted) {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
              audioPlayer.volume = 0; // Mute audio
+             volumeToggleBtn.classList.toggle("muted");
          } else {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
              audioPlayer.volume = volumeControl.value; // Unmute audio
@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
      volumeControl.addEventListener("input", function() {
          // Set volume based on the value of volume control input
          audioPlayer.volume = volumeControl.value;
-         
+         if (isMuted) {
+            volumeToggleBtn.classList.toggle("muted");
+         }
          // Update mute button icon when changing volume
          if (audioPlayer.volume === 0) {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
