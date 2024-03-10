@@ -460,10 +460,10 @@ nav {
     line-height: 1.5;
     font-size:15px;
     width:90%;
-
+    max-width:500px;
   }
   .foottext {
-
+    max-width:500px;
   }
   .poem {
     width:90%;
