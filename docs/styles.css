@@ -30,6 +30,7 @@ body {
     cursor:pointer;
     max-width:400px;
     width:100%;
+    margin-top:20px;
 }
 
 #playlistItems li:hover {
@@ -134,7 +135,7 @@ button#playPauseBtn.playing {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
 
     .player-container {
         max-width: 400px;
