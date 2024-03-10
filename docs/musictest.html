@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Cat With a Scarf</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+<nav>
+    <a title="Home" ontouchstart="toggleLink4(this)" href="/" class="home-link"><img width="30px" src="images/bubbofav.png" /></a>
+    <a class="title">Bubbo: The Lost Hat</a>
+    <div class="nav-links">
+    <!--  <a title="Google Play" target="_blank" href=""><i class="fa-brands fa-google-play"></i></a>-->
+      <a title="itch.io" ontouchstart="toggleLink4(this)" target="_blank" href="https://christiansheehan.itch.io/bubbo"><i class="fa-brands fa-itch-io"></i></a>
+      <a style="cursor:pointer;" id="fullscreen-btn" ontouchstart="toggleLink4(this)" onclick="toggleFullscreen()">
+        <i class="fas fa-expand"></i>
+      </a>
+    </div>
+  </nav>
 <body><center>
     <img title="Cover art by Jaryn Lampe" src="images/catwithascarf.jpg" width="350px"></img>
     <div class="player-container">
