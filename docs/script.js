@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
              audioPlayer.volume = volumeControl.value; // Unmute audio
          }
      });
- 
+     playPauseBtn.addEventListener("click", function() {
+        playPauseBtn.classList.toggle("toggled"); // Toggle the 'toggled' class
+    });
      // Volume slider input event listener
      volumeControl.addEventListener("input", function() {
          // Set volume based on the value of volume control input

@@ -15,6 +15,9 @@ body {
     justify-content:center;
 }
 
+#playPauseBtn.toggled {
+    margin-right: 12.25px; /* Adjust the margin as needed */
+}
 
 .playlist {
     width:400px;
