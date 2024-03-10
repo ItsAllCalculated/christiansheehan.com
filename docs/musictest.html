@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat With a Scarf</title>
     <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
+    <script src="music.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="music.css">
 </head>
 <nav>
     <a title="Home" ontouchstart="toggleLink4(this)" href="/" class="home-link"><img width="30px" src="images/favicon.png" /></a>
@@ -21,9 +23,10 @@
     </div>
   </nav>
 <body>
+    <center>
     <div class="player-container">
         <div class="flex">
-            <img style="margin:20px; margin-bottom:8px;" title="Cover art by Jaryn Lampe" src="images/catwithascarf.jpg" width="350px">
+            <img class="artcover" title="Cover art by Jaryn Lampe" src="images/catwithascarf.jpg" width="350px">
         <div class="time">
             <div id="currentTime">0:00</div>
             <div id="duration">0:00</div>
@@ -40,8 +43,10 @@
         </div>
             <div class="volume-control">
                 <a id="loopBtn"><i class="fas fa-redo"></i></a>
+                <div class="volume-control2">
                 <a id="volumeToggleBtn"><i class="fas fa-volume-up"></i></a>
                 <input style="margin-right:12px;" type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+            </div>
             </div>
         </div>
         <audio id="audioPlayer"></audio>
@@ -67,6 +72,5 @@
         Cover art by Jaryn Lampe<br><br>
         October 31, 2023<br><br>
       </div></div class="foot">
-    <script src="script.js"></script>
 </body>
 </html>
