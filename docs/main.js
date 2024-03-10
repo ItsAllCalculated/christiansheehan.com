@@ -66,6 +66,13 @@ function toggleLink4(element) {
     element.classList.toggle('active');
 }
 
+function toggleLink5(element) {
+  document.querySelectorAll('.body').forEach(function (el) {
+    el.classList.remove('active');
+  });
+  element.classList.toggle('active');
+}
+
 /*game*/
 
 window.addEventListener('resize', toggleVisibility);
