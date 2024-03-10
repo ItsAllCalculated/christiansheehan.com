@@ -9,11 +9,10 @@ body {
   }
 
 .player-container {
-    max-width: 400px;
-    width:90%;
     line-height: 2.0333;
     display:flex;
     flex-direction:row;
+    justify-content:center;
 }
 
 
