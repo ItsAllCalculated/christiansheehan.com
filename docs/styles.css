@@ -155,7 +155,6 @@ button#playPauseBtn.playing {
 /* Volume control styles */
 .volume-control {
     align-items: center; /* Vertically center content */
-    align-items:flex-end;
 }
 #volumeControl {
     -webkit-appearance: none; /* Remove default styling */
