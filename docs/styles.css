@@ -19,6 +19,9 @@ body {
     margin-right: 12.25px; /* Adjust the margin as needed */
 }
 
+.duration {
+    margin-right:5px;
+}
 .playlist {
     width:400px;
     max-height:450px;
