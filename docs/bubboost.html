@@ -1,556 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Bubbo: The Lost Hat OST</title>
-  <link rel="shortcut icon" href="images/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=0.7">
-  <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js" integrity="sha512-mA5b7w9mZvGLWgjIqp9KhWNzkkZ/H3gC4Ua6GOn9m/xl1UF4ghH8GsriKvAYxLsxoKvn6NdebW7kZ6iGB3CGSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  integrity="sha384-..."
-  crossorigin="anonymous"
-/>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/bubbofav.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbo: The Lost Hat OST</title>
+    <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="music.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="music.css">
 </head>
-<center>
-  <nav>
-    <a title="Home" href="/" class="nav-link home-link"><img width="30px" src="images/favicon.png" /></a>
-    <a class="nav-link music-link">Bubbo: The Lost Hat OST</a>
+<nav>
+    <a title="Home" ontouchstart="toggleLink4(this)" href="/" class="home-link"><img width="30px" src="images/favicon.png" /></a>
+    <a class="title">Bubbo: The Lost Hat OST</a>
   </nav>
-<div id="root"></div>
-  <div style="footer">
-May 17, 2021<br>From <a class="thing" target="_blank" href="/bubbo">Bubbo: The Lost Hat</a>
-<br><br></div>
-
-<style>
- @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Sometype+Mono&display=swap');
-
- .footer {
-	 bottom: 20px;
-}
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background:black;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #242424; 
-  border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #242424; 
-}
-nav {
-      justify-content: space-between;
-      background-color: #242424;
-      padding: 7px 20px;
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-link {
-      color: white;
-      text-decoration: none;
-      align-items: left;
-      margin-top: 2px;
-    }
-
-
-    .thing{
-      color:white;
-      text-decoration: none;
-      opacity: 1;
-    }
-    .thing:hover {
-      color:white;
-      opacity:0.7;  
-    }
-
-    /* Style for the Home link */
-    .home-link {
-      margin-right: 5px;
-      margin-top: 5px;
-      margin-left: 2px;
-      margin-bottom:5px;
-      /* Minimal margin between the home link and music link */
-       /* Add transition effect */
-    }
-
-    /* Hover style for the Home link */
-    .home-link:hover {
-      filter: brightness(70%);
-    }
-
-    /* Style for the Music link */
-    .music-link {
-      align-items: center;
-      text-align: left;
-      font-size: 15px;
-      margin-left: 15px;
-      margin-right: auto; /* Minimal margin between the home link and music link */
-      cursor: text;
-    }
-
-    .streaming-links {
-      text-align: right;
-      margin: 0;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-bottom: 0px;
-    }
-
-    .streaming-links a {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 1;
-    }
-
-    .streaming-links a:hover {
-      margin: 0 12px;
-      color: white;
-      text-decoration: none;
-      opacity: 0.7;
-    }
-
-    .streaming-links i {
-      font-size: 1.4em;
-    }
-
- body {
-	 font-family: 'Sometype Mono', sans-serif;
-	 color: white;
-	 display: flex;
-	 justify-content: center;
-	 align-items: right;
-	 flex-direction: column;
-	 background: #000;
-   overflow-x:hidden;
-   margin: 0;
-}
- body h1 {
-	 font-size: 36px;
-	 margin-bottom: 0;
-}
- body .card {
-	 flex-direction: column;
-	 align-items: center;
-	 max-width: 90%;
-	 padding: 0 5px;
-	 margin-top: 30px;
-	 color: #000;
-	 font-weight: 100;
-	 background: #000;
-	 overflow: hidden;
-}
- body .card .current-song {
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 width: 100%;
-	 padding: 0px 0px;
-	 background: black;
-}
- body .card .current-song audio {
-	 display: none;
-}
- body .card .current-song .img-wrap {
-	 position: relative;
-	 margin: 0 auto;
-	 width: 350px;
-	 height: 350px;
-	 overflow: hidden;
-	 border-radius: 0px;
-}
- body .card .current-song .img-wrap img {
-	 width: auto;
-	 height: 100%;
-}
- body .card .current-song .song-name {
-	 margin-top: 30px;
-	 font-size: 22px;
-	 color: white;
-}
- body .card .current-song .time {
-	 display: flex;
-	 justify-content: space-between;
-	 margin-top: 10px;
-	 margin-bottom: 10px;
-	 width: 450px;
-	 color: white;
-	 font-size: 15px;
-}
- body .card .current-song #timeline {
-	 position: relative;
-	 display: flex;
-	 justify-content: space-between;
-	 margin: 0 auto;
-	 width: 240px;
-	 height: 10px;
-	 width: 450px;
-	 background: #252525;
-	 border-radius: 0px;
-	 cursor: pointer;
-}
- body .card .current-song #timeline:hover .hover-playhead {
-	 opacity: 1;
-}
- body .card .current-song #timeline:hover .hover-playhead::before {
-	 opacity: 1;
-}
- body .card .current-song #timeline:hover .hover-playhead::after {
-	 opacity: 1;
-}
- body .card .current-song #timeline #playhead {
-	 display: flex;
-	 justify-content: space-between;
-	 position: relative;
-	 z-index: 2;
-	 width: 0;
-	 height: 10px;
-	 border-radius: 0px;
-	 background: #fff;
-}
- body .card .current-song #timeline .hover-playhead {
-	 position: absolute;
-	 z-index: 1;
-	 top: 0;
-	 width: 0;
-	 height: 5px;
-	 opacity: 0;
-	 color: white;
-}
- body .card .current-song .controls {
-	 margin-top: 10px;
-}
- body .card .current-song .controls button {
-	 color: white;
-	 border-radius: 10%;
-	 margin: 15px;
-	 font-size: 18px;
-	 text-align: center;
-	 cursor: pointer;
-	 border: none;
-	 background: 0;
-	 color: white;
-}
- body .card .current-song .controls button:focus {
-	 outline: none;
-}
- body .card .current-song .controls button.play {
-	 width: 35px;
-	 height: 35px;
-}
- body .card .current-song .controls button.play:hover {
-	 opacity: 0.7;
-}
- body .card .current-song .controls button.play .fa-play {
-	 transform: translateX(2px);
-}
- body .card .current-song .controls button.prev-next {
-	 width: 35px;
-	 height: 35px;
-}
- body .card .current-song .controls button.prev-next:hover {
-	 opacity: 0.7;
-}
- body .card .play-list {
-	 display: flex;
-	 flex-direction: column;
-	 margin-top: 20px;
-	 padding: 0px;
-	 width: 400px;
-	 height: 610px;
-	 overflow-y: hidden;
-}
- body .card .play-list .track {
-	 display: flex;
-	 margin-bottom: 5px;
-	 cursor: pointer;
-}
- body .card .play-list .track:hover {
-	 position: relative;
-	 opacity: 0.7;
-}
- body .card .play-list .track.current-audio {
-	 background-color: #252525;
-}
- body .card .play-list .track.play-now {
-	 position: relative;
-	 background: #252525;
-}
- body .card .play-list .track.play-now:after {
-	 content: '';
-	 display: block;
-	 position: absolute;
-	 width: 100%;
-	 height: 100%;
-	 z-index: 1;
-}
- body .card .track-discr {
-	 margin-left: 0px;
-	 display: flex;
-	 flex-direction: column;
-	 min-width: 295px;
-}
- body .card .track-discr .track-name {
-	 text-align: left;
-	 font-size: 17px;
-	 margin-top: 6px;
-	 margin-left: 5px;
-	 margin-bottom: 6px;
-	 color: white;
-}
- body .card .track-duration {
-	 text-align: right;
-	 margin-top: 6px;
-	 margin-bottom: 6px;
-	 min-width: 90px;
-	 margin-left: 10px;
-	 margin-right: 0px;
-	 font-weight: 500;
-	 color: white;
-	 font-size: 17px;
-}
- 
-</style>
-
-<script type="text/babel">
-  class CardProfile extends React.Component {
-  state = {
-    index: 0,
-    currentTime: '0:00',
-    musicList: [{name:'Main Menu', audio:'audio/Main Menu.mp3', duration: '1:04'},
-    {name:'Opening Number', audio:'audio/Musical Number 1.mp3', duration: '0:17'},
-    {name:'Levels 1-2', audio:'audio/Levels 1-2.mp3', duration: '2:56'},
-    {name:'Eggs Number', audio:'audio/Musical Number 2.mp3', duration: '0:42'},
-    {name:'Levels 3-4', audio:'audio/Levels 3-4.mp3', duration: '2:30'}, 
-      {name:'Jazz Number', audio:'audio/Musical Number 3.mp3', duration: '0:56'},
-      {name:'Levels 5-6', audio:'audio/Levels 5-6.mp3', duration: '2:16'},
-      {name:'Waltz Number', audio:'audio/Musical Number 4.mp3', duration: '0:38'},
-      {name:'Levels 7-8', audio:'audio/Levels 7-8.mp3', duration: '2:26'},
-      {name:'Theatrical Number', audio:'audio/Musical Number 5.mp3', duration: '0:44'},
-      {name:'Level 9', audio:'audio/Level 9.mp3', duration: '2:55'},
-      {name:'Level 10', audio:'audio/Level 10.mp3', duration: '2:07'},
-      {name:'Closing Number', audio:'audio/Musical Number 6.mp3', duration: '0:50'},
-      {name:'Credits', audio:'audio/Credits.mp3', duration: '0:25'},
-      {name:'BONUS TRACK', audio:'audio/bubbobonus.mp3', duration: '0:23'},],
-    pause: false,
-  };
-
-
- componentDidMount() {
-   this.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
-   this.playerRef.addEventListener("ended", this.nextSong, false);
-   this.timelineRef.addEventListener("click", this.changeCurrentTime, false);
-   this.timelineRef.addEventListener("mousemove", this.hoverTimeLine, false);
-   this.timelineRef.addEventListener("mouseout", this.resetTimeLine, false);
- }
-
-  componentWillUnmount() {
-    this.playerRef.removeEventListener("timeupdate", this.timeUpdate);
-    this.playerRef.removeEventListener("ended", this.nextSong);
-    this.timelineRef.removeEventListener("click", this.changeCurrentTime);
-    this.timelineRef.removeEventListener("mousemove", this.hoverTimeLine);
-    this.timelineRef.removeEventListener("mouseout", this.resetTimeLine);
-  }
-
-changeCurrentTime = (e) => {
-  const duration = this.playerRef.duration;
-  
-  const playheadWidth = this.timelineRef.offsetWidth;
-  const offsetWidht = this.timelineRef.offsetLeft;
-  const userClickWidht = e.clientX - offsetWidht;
- 
-  const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
-
-  this.playheadRef.style.width = userClickWidhtInPercent + "%";
-  this.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
-}
-
-hoverTimeLine = (e) => {
-  const duration = this.playerRef.duration;
-  
-  const playheadWidth = this.timelineRef.offsetWidth
-  
-  const offsetWidht = this.timelineRef.offsetLeft;
-  const userClickWidht = e.clientX - offsetWidht;
-  const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
-
-  if(userClickWidhtInPercent <= 100){
-    this.hoverPlayheadRef.style.width = userClickWidhtInPercent + "%";
-  }
-  
-  const time = (duration * userClickWidhtInPercent)/100;
-  
-  if( (time >=0) && (time <= duration)){
-    this.hoverPlayheadRef.dataset.content = this.formatTime(time);
-  }
-}
-
-resetTimeLine = () => {
-  this.hoverPlayheadRef.style.width = 0;
-}
-
-timeUpdate = () => {
-  const duration = this.playerRef.duration;
-  const timelineWidth = this.timelineRef.offsetWidth - this.playheadRef.offsetWidth;
-  const playPercent = 100 * (this.playerRef.currentTime / duration);
-	this.playheadRef.style.width = playPercent + "%";
-  const currentTime = this.formatTime(parseInt(this.playerRef.currentTime));  
-  this.setState({ 
-    currentTime 
-  });
-}
-
-formatTime = (currentTime) =>{
-  const minutes = Math.floor(currentTime / 60);
-  let seconds = Math.floor(currentTime % 60);
-
-  seconds = (seconds >= 10) ? seconds : "0" + seconds % 60;
-  
-  const formatTime = minutes + ":" +  seconds
- 
-  return formatTime;
-  }
-
-  updatePlayer = () =>{
-    const { musicList, index } = this.state;
-    const currentSong = musicList[index];
-    const audio = new Audio(currentSong.audio);
-    this.playerRef.load();
-  }
-  
-  nextSong = () => {
-    const { musicList, index, pause } = this.state;
-  
-    this.setState({ 
-      index: (index + 1) % musicList.length
-    });
-    this.updatePlayer();
-    if(pause){
-      this.playerRef.play();
-    }
-  };
-
-  prevSong = () => {
-    const { musicList, index, pause } = this.state;  
-    
-    this.setState({ 
-      index: (index + musicList.length - 1) % musicList.length
-    });
-    this.updatePlayer();
-    if(pause){
-      this.playerRef.play();
-    }
-  };
-   
-
-  playOrPause = () =>{
-    const { musicList, index, pause } = this.state;
-    const currentSong = musicList[index];
-    const audio = new Audio(currentSong.audio);
-    if( !this.state.pause ){
-      this.playerRef.play();
-    }else{
-      this.playerRef.pause();
-    }
-    this.setState({
-      pause: !pause
-    })
-  }
-  
-  clickAudio = (key) =>{
-    const { pause } = this.state;
-    
-    this.setState({
-      index: key
-    });
-    
-    this.updatePlayer();
-    if(pause){
-      this.playerRef.play();
-    }
-  }
-
-  
-  render() {
-    const { musicList, index, currentTime, pause } = this.state;
-    const currentSong = musicList[index];
-    return (
-      <div className="card">
-        <div className="current-song">
-          <audio ref={ref => this.playerRef = ref}>
-            <source src={ currentSong.audio } type="audio/ogg"/>
-              Your browser does not support the audio element.
-          </audio>
-          <div className="img-wrap">
-            <img src="images/bubboost.jpg"/>
-           </div>
-          <span className="song-name">{ currentSong.name }</span>
- 
-          
-          <div className="time">
-            <div className="current-time">{ currentTime }</div>
-            <div className="end-time">{ currentSong.duration }</div>
-          </div>
-          
-          <div ref={ref => this.timelineRef = ref} id="timeline">
-            <div ref={ref => this.playheadRef = ref} id="playhead"></div>
-            <div ref={ref => this.hoverPlayheadRef = ref} class="hover-playhead" data-content="0:00"></div>
-          </div>
-          
-          <div className="controls">
-            <button onClick={this.prevSong} className="prev prev-next current-btn"><i className="fas fa-backward"></i></button>
-            
-            <button onClick={this.playOrPause} className="play current-btn">
-              {
-                (!pause) ? <i className="fas fa-play"></i>
-                :<i class="fas fa-pause"></i>
-              }
-            </button>
-            <button onClick={this.nextSong} className="next prev-next current-btn"><i className="fas fa-forward"></i></button>
-          </div>
-          
+<body>
+    <center>
+    <div class="player-container">
+        <div class="flex">
+            <img class="artcover" src="images/bubboost.jpg" width="350px">
+        <div class="time">
+            <div id="currentTime">0:00</div>
+            <div id="duration">0:00</div>
         </div>
-        <div className="play-list" >
-          {musicList.map( (music, key=0) =>
-                         <div key={key} 
-                           onClick={()=>this.clickAudio(key)}
-                           className={"track " + 
-                             (index === key && !pause ?'current-audio':'') + 
-                             (index === key && pause ?'play-now':'')} >
-                           
-                   
-                           <div className="track-discr" >
-                             <span className="track-name" >{music.name}</span>
-                   
-                           </div>
-                           <span className="track-duration" >{music.duration}
-
-                             
-                           </span>
-                         </div>
-                        )}
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
         </div>
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(
-  <CardProfile/>,
-  document.getElementById('root')
-)
-</script>
+     
+        <div class="controls">
+            <div class="playback">
+            <a id="prevBtn"><i class="fas fa-backward"></i></a>
+            <a id="playPauseBtn"><i class="fas fa-play"></i></a>
+            <a id="skipBtn"><i class="fas fa-forward"></i></a>
+        </div>
+            <div class="volume-control">
+                <a id="loopBtn"><i class="fas fa-redo"></i></a>
+                <div class="volume-control2">
+                <a id="volumeToggleBtn"><i class="fas fa-volume-up"></i></a>
+                <input style="margin-right:12px;" type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+            </div>
+            </div>
+        </div>
+        <audio id="audioPlayer"></audio>
+    </div>
+    <div class="flex">
+        <div class="playlist">
+            <ul id="playlistItems">
+                <li class="selected" data-src="audio/Main Menu.mp3"><span class="track-name">Main Menu</span><span class="duration">1:04</span></li>
+                <li data-src="audio/Musical Number 1.mp3"><span class="track-name">Opening Number</span><span class="duration">0:17</span></li>
+                <li data-src="audio/Levels 1-2.mp3"><span class="track-name">Levels 1-2</span><span class="duration">2:56</span></li>
+                <li data-src="audio/Musical Number 2.mp3"><span class="track-name">Eggs Number</span><span class="duration">0:42</span></li>
+                <li data-src="audio/Levels 3-4.mp3"><span class="track-name">Levels 3-4</span><span class="duration">2:30</span></li>
+                <li data-src="audio/Musical Number 3.mp3"><span class="track-name">Jazz Number</span><span class="duration">0:56</span></li>
+                <li data-src="audio/Levels 5-6.mp3"><span class="track-name">Levels 5-6</span><span class="duration">2:16</span></li>
+                <li data-src="audio/Musical Number 4.mp3"><span class="track-name">Waltz Number</span><span class="duration">0:38</span></li>
+                <li data-src="audio/Levels 7-8.mp3"><span class="track-name">Levels 7-8</span><span class="duration">2:26</span></li>
+                <li data-src="audio/Musical Number 5.mp3"><span class="track-name">Theatrical Number</span><span class="duration">0:44</span></li>
+                <li data-src="audio/Level 9.mp3"><span class="track-name">Level 9</span><span class="duration">2:55</span></li>
+                <li data-src="audio/Level 10.mp3"><span class="track-name">Level 10</span><span class="duration">2:07</span></li>
+                <li data-src="audio/Musical Number 6.mp3"><span class="track-name">Closing Number</span><span class="duration">0:50</span></li>
+                <li data-src="audio/Credits.mp3"><span class="track-name">Credits</span><span class="duration">0:25</span></li>
+                <li data-src="audio/bubbobonus.mp3"><span class="track-name">BONUS TRACK</span><span class="duration">0:23</span></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="foot">  
+        <div class="foottext">
+        <br>
+        May 17, 2021<br><br>From <a class="thing" target="_blank" href="/bubbo">Bubbo: The Lost Hat</a><br><br>
+      </div></div class="foot">
+</body>
+</html>
