@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body><center>
+    <img title="Cover art by Jaryn Lampe" src="images/catwithascarf.jpg" width="350px"></img>
+    <div class="player-container">
+        <div class="time">
+            <div id="currentTime">0:00</div>
+            <div id="duration">0:00</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+     
+        <div class="controls">
+            <div class="playback">
+            <a id="prevBtn"><i class="fas fa-backward"></i></a>
+            <a id="playPauseBtn"><i class="fas fa-play"></i></a>
+            <a id="skipBtn"><i class="fas fa-forward"></i></a>
+        </div>
+            <div class="volume-control">
+                <a id="loopBtn"><i class="fas fa-redo"></i></a>
+                <a id="volumeToggleBtn"><i class="fas fa-volume-up"></i></a>
+                <input style="margin-right:12px;" type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+        <audio id="audioPlayer"></audio>
+        <div class="playlist">
+            <ul id="playlistItems">
+                <li class="selected" data-src="autumnalprelude.mp3"><span class="track-name">Autumnal Prelude</span><span class="duration">1:16</span></li>
+                <li data-src="audio/etherealhands.mp3"><span class="track-name">Ethereal Hands</span><span class="duration">2:05</span></li>
+                <li data-src="audio/dimlighting.mp3"><span class="track-name">Dim Lighting</span><span class="duration">3:01</span></li>
+                <li data-src="audio/cloudyreverie.mp3"><span class="track-name">Cloudy Reverie</span><span class="duration">3:20</span></li>
+                <li data-src="audio/bedsidewindow.mp3"><span class="track-name">Bedside Window</span><span class="duration">2:18</span></li>
+                <li data-src="audio/mintywaltz.mp3"><span class="track-name">Minty Waltz</span><span class="duration">3:03</span></li>
+                <li data-src="audio/chromaticeyes.mp3"><span class="track-name">Chromatic Eyes</span><span class="duration">1:37</span></li>
+                <li data-src="audio/bittersweetdream.mp3"><span class="track-name">Bittersweet Dream</span><span class="duration">5:31</span></li>
+            </ul>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
