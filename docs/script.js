@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
          if (audioPlayer.volume === 0) {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
              isMuted = true;
+             volumeToggleBtn.classList.toggle("muted");
          } else {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
              isMuted = false;
