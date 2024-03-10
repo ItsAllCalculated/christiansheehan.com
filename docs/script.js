@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
              audioPlayer.volume = volumeControl.value;
               // Unmute audio
+              volumeToggleBtn.classList.toggle("muted");
          }
      });
      playPauseBtn.addEventListener("click", function() {
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
          } else {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
              isMuted = false;
+             volumeToggleBtn.classList.toggle("muted");
          }
      });
     function playPause() {
