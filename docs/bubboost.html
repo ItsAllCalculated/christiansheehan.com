@@ -31,14 +31,14 @@
      
         <div class="controls">
             <div class="playback">
-            <a id="prevBtn"><i class="fas fa-backward"></i></a>
-            <a id="playPauseBtn"><i class="fas fa-play"></i></a>
-            <a id="skipBtn"><i class="fas fa-forward"></i></a>
+            <a ontouchstart="toggleLink5(this)" id="prevBtn"><i class="fas fa-backward"></i></a>
+            <a ontouchstart="toggleLink5(this)" id="playPauseBtn"><i class="fas fa-play"></i></a>
+            <a ontouchstart="toggleLink5(this)" id="skipBtn"><i class="fas fa-forward"></i></a>
         </div>
             <div class="volume-control">
-                <a id="loopBtn"><i class="fas fa-redo"></i></a>
+                <a ontouchstart="toggleLink5(this)" id="loopBtn"><i class="fas fa-redo"></i></a>
                 <div class="volume-control2">
-                <a id="volumeToggleBtn"><i class="fas fa-volume-up"></i></a>
+                <a ontouchstart="toggleLink5(this)" id="volumeToggleBtn"><i class="fas fa-volume-up"></i></a>
                 <input style="margin-right:12px;" type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
             </div>
             </div>
@@ -48,21 +48,21 @@
     <div class="flex">
         <div class="playlist">
             <ul id="playlistItems">
-                <li class="selected" data-src="audio/Main Menu.mp3"><span class="track-name">Main Menu</span><span class="duration">1:04</span></li>
-                <li data-src="audio/Musical Number 1.mp3"><span class="track-name">Opening Number</span><span class="duration">0:17</span></li>
-                <li data-src="audio/Levels 1-2.mp3"><span class="track-name">Levels 1-2</span><span class="duration">2:56</span></li>
-                <li data-src="audio/Musical Number 2.mp3"><span class="track-name">Eggs Number</span><span class="duration">0:42</span></li>
-                <li data-src="audio/Levels 3-4.mp3"><span class="track-name">Levels 3-4</span><span class="duration">2:30</span></li>
-                <li data-src="audio/Musical Number 3.mp3"><span class="track-name">Jazz Number</span><span class="duration">0:56</span></li>
-                <li data-src="audio/Levels 5-6.mp3"><span class="track-name">Levels 5-6</span><span class="duration">2:16</span></li>
-                <li data-src="audio/Musical Number 4.mp3"><span class="track-name">Waltz Number</span><span class="duration">0:38</span></li>
-                <li data-src="audio/Levels 7-8.mp3"><span class="track-name">Levels 7-8</span><span class="duration">2:26</span></li>
-                <li data-src="audio/Musical Number 5.mp3"><span class="track-name">Theatrical Number</span><span class="duration">0:44</span></li>
-                <li data-src="audio/Level 9.mp3"><span class="track-name">Level 9</span><span class="duration">2:55</span></li>
-                <li data-src="audio/Level 10.mp3"><span class="track-name">Level 10</span><span class="duration">2:07</span></li>
-                <li data-src="audio/Musical Number 6.mp3"><span class="track-name">Closing Number</span><span class="duration">0:50</span></li>
-                <li data-src="audio/Credits.mp3"><span class="track-name">Credits</span><span class="duration">0:25</span></li>
-                <li data-src="audio/bubbobonus.mp3"><span class="track-name">BONUS TRACK</span><span class="duration">0:23</span></li>
+                <li ontouchstart="toggleLink5(this)" class="selected" data-src="audio/Main Menu.mp3"><span class="track-name">Main Menu</span><span class="duration">1:04</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Musical Number 1.mp3"><span class="track-name">Opening Number</span><span class="duration">0:17</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Levels 1-2.mp3"><span class="track-name">Levels 1-2</span><span class="duration">2:56</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Musical Number 2.mp3"><span class="track-name">Eggs Number</span><span class="duration">0:42</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Levels 3-4.mp3"><span class="track-name">Levels 3-4</span><span class="duration">2:30</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Musical Number 3.mp3"><span class="track-name">Jazz Number</span><span class="duration">0:56</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Levels 5-6.mp3"><span class="track-name">Levels 5-6</span><span class="duration">2:16</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Musical Number 4.mp3"><span class="track-name">Waltz Number</span><span class="duration">0:38</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Levels 7-8.mp3"><span class="track-name">Levels 7-8</span><span class="duration">2:26</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Musical Number 5.mp3"><span class="track-name">Theatrical Number</span><span class="duration">0:44</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Level 9.mp3"><span class="track-name">Level 9</span><span class="duration">2:55</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Level 10.mp3"><span class="track-name">Level 10</span><span class="duration">2:07</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Musical Number 6.mp3"><span class="track-name">Closing Number</span><span class="duration">0:50</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Credits.mp3"><span class="track-name">Credits</span><span class="duration">0:25</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/bubbobonus.mp3"><span class="track-name">BONUS TRACK</span><span class="duration">0:23</span></li>
             </ul>
         </div>
     </div>

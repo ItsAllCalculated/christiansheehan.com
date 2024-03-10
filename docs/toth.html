@@ -31,14 +31,14 @@
      
         <div class="controls">
             <div class="playback">
-            <a id="prevBtn"><i class="fas fa-backward"></i></a>
-            <a id="playPauseBtn"><i class="fas fa-play"></i></a>
-            <a id="skipBtn"><i class="fas fa-forward"></i></a>
+            <a ontouchstart="toggleLink5(this)" id="prevBtn"><i class="fas fa-backward"></i></a>
+            <a ontouchstart="toggleLink5(this)" id="playPauseBtn"><i class="fas fa-play"></i></a>
+            <a ontouchstart="toggleLink5(this)" id="skipBtn"><i class="fas fa-forward"></i></a>
         </div>
             <div class="volume-control">
-                <a id="loopBtn"><i class="fas fa-redo"></i></a>
+                <a ontouchstart="toggleLink5(this)" id="loopBtn"><i class="fas fa-redo"></i></a>
                 <div class="volume-control2">
-                <a id="volumeToggleBtn"><i class="fas fa-volume-up"></i></a>
+                <a ontouchstart="toggleLink5(this)" id="volumeToggleBtn"><i class="fas fa-volume-up"></i></a>
                 <input style="margin-right:12px;" type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
             </div>
             </div>
@@ -48,9 +48,9 @@
     <div class="flex">
         <div class="playlist">
             <ul id="playlistItems">
-                <li class="selected" data-src="audio/Dustin Toth.mp3"><span class="track-name">Dustin Toth</span><span class="duration">0:31</span></li>
-                <li data-src="audio/Dustin Toth (Extended).mp3"><span class="track-name">Dustin Toth (Extended)</span><span class="duration">3:47</span></li>
-                <li data-src="audio/Dustin Toth Lofi.mp3"><span class="track-name">Dustin Toth Lofi</span><span class="duration">2:20</span></li>
+                <li ontouchstart="toggleLink5(this)" class="selected" data-src="audio/Dustin Toth.mp3"><span class="track-name">Dustin Toth</span><span class="duration">0:31</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Dustin Toth (Extended).mp3"><span class="track-name">Dustin Toth (Extended)</span><span class="duration">3:47</span></li>
+                <li ontouchstart="toggleLink5(this)" data-src="audio/Dustin Toth Lofi.mp3"><span class="track-name">Dustin Toth Lofi</span><span class="duration">2:20</span></li>
             </ul>
         </div>
     </div>
