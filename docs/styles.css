@@ -103,7 +103,6 @@ button#playPauseBtn.playing {
 
 .selected {
     background-color: #242424;
-    height:14px; /* Change to the desired background color */
 }
 
 #volumeToggleBtn.muted {
