@@ -182,6 +182,9 @@ button#playPauseBtn.playing {
     .controls a {
         margin: 10px 15px 10px 15px;
     }
+    .playlist {
+        height: 100%;
+    }
 }
 
 .track-name {
