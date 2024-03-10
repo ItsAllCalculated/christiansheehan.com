@@ -11,10 +11,9 @@
 </head>
 
 <body>
-  <audio id="background-audio" loop>
+  <audio autoplay loop>
     <source src="audio/speedsphere.mp3" type="audio/mpeg">
-  </audio>
-
+</audio>
   <nav>
     <a title="Home" ontouchstart="toggleLink4(this)" href="/" class="home-link"><img width="30px" src="images/favicon.png" /></a>
     <a class="title">Speedsphere</a>
@@ -33,19 +32,33 @@
       <div class="foottext">
       <br>
       A simple 2D platformer speedrunning game.
-      <br><br>
+<br><br>
       December 21, 2020<br>
       <br>
     </div>
   </div>
 
     <script>
-      function playAudio() {
-        var audio = document.getElementById("background-audio");
-        audio.play();
+      function toggleFullscreen() {
+        var iframe = document.getElementById("game-iframe");
+        if (!document.fullscreenElement) {
+          iframe.requestFullscreen().catch(err => {
+            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+          });
+        } else {
+          document.exitFullscreen();
+        }
+        document.addEventListener("fullscreenchange", function () {
+    var iframe = document.getElementById("game-iframe");
+    if (document.fullscreenElement) {
+      iframe.style.width = "100vw";
+      iframe.style.height = "100vh";
+    } else {
+      iframe.style.width = "960px"; // Set back to original width
+      iframe.style.height = "580px"; // Set back to original height
+    }
+  });
       }
-
-      document.getElementById("game-iframe").addEventListener("click", playAudio);
     </script>
   </center>
 
