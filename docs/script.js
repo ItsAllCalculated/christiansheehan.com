@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function() {
          if (isMuted) {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
              audioPlayer.volume = 0; // Mute audio
-             volumeToggleBtn.classList.toggle("muted");
          } else {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
-             audioPlayer.volume = volumeControl.value; // Unmute audio
+             audioPlayer.volume = volumeControl.value;
+             volumeToggleBtn.classList.toggle("muted"); // Unmute audio
          }
      });
      playPauseBtn.addEventListener("click", function() {
@@ -39,9 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
      volumeControl.addEventListener("input", function() {
          // Set volume based on the value of volume control input
          audioPlayer.volume = volumeControl.value;
-         if (isMuted) {
-            volumeToggleBtn.classList.toggle("muted");
-         }
          // Update mute button icon when changing volume
          if (audioPlayer.volume === 0) {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
