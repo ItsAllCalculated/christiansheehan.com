@@ -6,14 +6,13 @@ body {
     overflow-x: hidden;
     color: white;
     margin: 0;
-    font-size: 15px;
-    line-height: 2.0333;
   }
 
 
 .player-container {
     max-width: 400px;
     width:90%;
+    line-height: 2.0333;
 }
 
 .playlist {
@@ -27,7 +26,8 @@ body {
 
 #playlistItems {
     cursor:pointer;
-    min-width:400px;
+    max-width:400px;
+    width:100%;
 }
 
 #playlistItems li:hover {
