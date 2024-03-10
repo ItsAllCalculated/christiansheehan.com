@@ -40,6 +40,7 @@ body {
     margin-top: 15px;
     display:flex;
     justify-content: space-between;
+    align-items:center;
     /* Align items to the right */
 }
 
@@ -117,7 +118,8 @@ button#playPauseBtn.playing {
 }
 /* Volume controls */
 .volume-control {
-    display: none; /* Hide volume controls by default */
+    display: none; 
+    align-items:center;/* Hide volume controls by default */
 }
 
 /* Media query to show volume controls on screens wider than 768px */
