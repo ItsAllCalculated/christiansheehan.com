@@ -26,10 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
          if (isMuted) {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
              audioPlayer.volume = 0; // Mute audio
+             volumeToggleBtn.classList.toggle("muted");
          } else {
              volumeToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
              audioPlayer.volume = volumeControl.value;
-             volumeToggleBtn.classList.toggle("muted"); // Unmute audio
+              // Unmute audio
          }
      });
      playPauseBtn.addEventListener("click", function() {
