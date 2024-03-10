@@ -163,7 +163,6 @@ loopBtn.addEventListener("click", function() {
     });
     audioPlayer.addEventListener("ended", function() {
         // Increment the current song index
-        currentSongIndex++;
         // If it exceeds the length of the playlist, loop back to the first track
         if (currentSongIndex >= playlistItems.length) {
             currentSongIndex = 0;
