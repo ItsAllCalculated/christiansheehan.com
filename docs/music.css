@@ -186,6 +186,9 @@ button#playPauseBtn.playing {
         height: 100%;
         max-height: 10000px;
     }
+    #playlistItems {
+        margin-top:0px;
+    }
 }
 
 .track-name {
