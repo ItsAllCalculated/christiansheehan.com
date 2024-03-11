@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sphere Jump</title>
+  <link rel="shortcut icon" href="images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <a title="Home" ontouchstart="toggleLink4(this)" href="/" class="home-link"><img width="30px" src="images/favicon.png" /></a>
+    <a class="title">Sphere Jump</a>
+    <div class="nav-links">
+    </div>
+  </nav>
+  <center>
+    <iframe id="game-iframe" style="margin-top: 20px; margin-bottom: 20px; display: block;" frameborder="0" src="https://itch.io/embed-upload/9913294?color=333333" allowfullscreen="" width="960" height="580"><a href="https://christiansheehan.itch.io/speedsphere">Play Speedsphere on itch.io</a></iframe>
+    <div class="mobile-message">
+      <br>
+      Not supported for mobile devices.
+      <br><br>
+    </div>
+
+    <div class="foot">
+      <div class="foottext">
+      <br>
+      2D platformer test.
+<br><br>
+      December 12, 2020<br>
+      <br>
+    </div>
+  </div>
+
+    <script>
+      function toggleFullscreen() {
+        var iframe = document.getElementById("game-iframe");
+        if (!document.fullscreenElement) {
+          iframe.requestFullscreen().catch(err => {
+            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+          });
+        } else {
+          document.exitFullscreen();
+        }
+        document.addEventListener("fullscreenchange", function () {
+    var iframe = document.getElementById("game-iframe");
+    if (document.fullscreenElement) {
+      iframe.style.width = "100vw";
+      iframe.style.height = "100vh";
+    } else {
+      iframe.style.width = "960px"; // Set back to original width
+      iframe.style.height = "580px"; // Set back to original height
+    }
+  });
+      }
+    </script>
+  </center>
+
+</body>
+
+</html>
