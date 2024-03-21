@@ -250,7 +250,7 @@ body {
 nav {
     justify-content: space-between;
     background-color: #242424;
-    padding: 5px 20px;
+    padding: 5px 15px;
     display: flex;
     align-items: center;
     position:relative;
