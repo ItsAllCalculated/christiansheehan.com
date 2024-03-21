@@ -159,7 +159,7 @@ body {
     }
 
     .nav-links a {
-      margin: 0 11px;
+      margin: 0 10px;
       color: white;
       text-decoration: none;
       opacity: 1;
@@ -250,7 +250,7 @@ body {
 nav {
     justify-content: space-between;
     background-color: #242424;
-    padding: 5px 15px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     position:relative;
@@ -495,7 +495,7 @@ nav {
   }
 
   .nav-links a {
-    margin: 0 10px;
+    margin: 0 8px;
     color: white;
     text-decoration: none;
     opacity: 1;
