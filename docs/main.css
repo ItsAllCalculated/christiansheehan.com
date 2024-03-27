@@ -428,6 +428,11 @@ nav {
     right: calc(50%);
     display: block;
 }
+.type {
+  position: absolute;
+  right: calc(50%);
+  display: block;
+}
 
 @media (max-width: 650px) {
     .linkdate {
@@ -436,6 +441,9 @@ nav {
     .dot {
         display: none;
     }
+    .type {
+      display: none;
+  }
 }
 
 /*Game*/
