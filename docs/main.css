@@ -423,6 +423,13 @@ nav {
     white-space:nowrap;
 }
 
+.dot {
+    position: absolute;
+    right: calc(50%);
+    display: block;
+}
+
+
 @media (max-width: 650px) {
     .linkdate {
         margin-left: 60px;
@@ -430,9 +437,7 @@ nav {
     .dot {
         display: none;
     }
-    .type {
-      display: none;
-  }
+
 }
 
 /*Game*/
