@@ -430,7 +430,7 @@ nav {
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 975px) {
     .linkdate {
         margin-left: 60px;
     }
