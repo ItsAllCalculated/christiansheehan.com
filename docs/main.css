@@ -497,7 +497,7 @@ nav {
   }
 
   .nav-links a {
-    margin: 0 8px;
+    margin: 0 10px;
     color: white;
     text-decoration: none;
     opacity: 1;
@@ -513,7 +513,7 @@ nav {
   .title {
     align-items: center;
     text-align: left;
-    margin-left: 12px;
+    margin-left: 15px;
     margin-right: auto;
     text-overflow: ellipsis;
     white-space: nowrap;
