@@ -9,10 +9,6 @@ body {
     font-size: 15px;
   }
 
-body ::selection{
-  background:red;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }
