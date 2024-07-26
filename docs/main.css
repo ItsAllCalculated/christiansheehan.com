@@ -26,6 +26,10 @@ body {
 }
 
 /*Home*/
+.paintbrusharrested {
+height:100%;
+width: 100%;
+}
 
 .home-container {
   position:absolute;
