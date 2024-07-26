@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image</title>
+    <title>Christian Sheehan</title>
+    <meta name="description" content="before real estate was real">
+    <link rel="shortcut icon" href="/images/paintbrush.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
     <style>
         body, html {
             margin: 0;
@@ -35,7 +38,19 @@
 </head>
 <body>
     <div class="container">
-        <img src="arrested.png" alt="Centered Image">
+        <img src="images/arrested.jpg" alt="Centered Image">
     </div>
+
+    <div id="emailFormContainer" class="hidden">
+        <a title="Email" ontouchstart="toggleLink3(this)" class="emaillink" href="mailto:christiansheehan@christiansheehan.com" id="emailAddress" style="margin-bottom: 8px;">christiansheehan@christiansheehan.com</a>
+        <a title="Copy" ontouchstart="toggleLink3(this)" class="copy" onclick="copyToClipboard()"><i class="fa-regular fa-copy fa-xl"></i></a>
+    </div>
+
+    <ul class="homenav">
+        <li><a title="YouTube" ontouchstart="toggleLink(this)" target="_blank" href="https://youtube.com/christiansheehan"><i class="fa fa-youtube-play fa-2x"></i></a></li>
+        <li><a class="Email" ontouchstart="toggleLink(this)" title="Email" onclick="toggleEmailForm()"><i class="fa fa-envelope fa-2x"></i></a></li>
+        <li><a title="Music" ontouchstart="toggleLink(this)" href="/music"><i class="fa fa-music fa-2x"></i></a></li>
+        <li><a title="Projects" ontouchstart="toggleLink(this)" href="/projects"><i class="fa fa-code fa-2x"></i></a></li>
+    </ul>
 </body>
 </html>
