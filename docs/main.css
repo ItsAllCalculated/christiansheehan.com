@@ -82,7 +82,7 @@ width: 100%;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  -
+}
 .foot {
   line-height: 1.5;
   background-color:#242424;
@@ -90,12 +90,9 @@ width: 100%;
 }
 .homenav {
     padding: 20px 0 20px 0;
-    position: absolute;
-    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     white-space: nowrap;
-    margin-top:100px;
     position: fixed;
     bottom: 10%;
     left: 50%;
@@ -130,11 +127,8 @@ width: 100%;
 
 #emailFormContainer {
     text-align: center;
-    position: absolute;
-    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    margin-top:50px;
     white-space: nowrap;
     position: fixed;
     bottom: 20%;
