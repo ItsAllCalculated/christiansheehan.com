@@ -60,7 +60,29 @@ width: 100%;
 .Email {
     cursor: pointer;
 }
+.container2 {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.container2 img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -
 .foot {
   line-height: 1.5;
   background-color:#242424;
@@ -74,12 +96,23 @@ width: 100%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     margin-top:100px;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .homenav>li {
     display: inline-block;
     width:60px;
     text-align:center;
+    margin: 0 10px; 
 }
 
 .homenav>li>a {
@@ -103,6 +136,11 @@ width: 100%;
     transform: translate(-50%, -50%);
     margin-top:50px;
     white-space: nowrap;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 #emailForm {
