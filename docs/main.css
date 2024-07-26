@@ -73,7 +73,7 @@ width: 100%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     white-space: nowrap;
-    margin-top:50px;
+    margin-top:100px;
 }
 
 .homenav>li {
@@ -101,7 +101,7 @@ width: 100%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    margin-top:100px;
+    margin-top:50px;
     white-space: nowrap;
 }
 
