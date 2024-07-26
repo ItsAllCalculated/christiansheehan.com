@@ -1,45 +1,61 @@
+<!--
+You are tired,
+(I think)
+Of the always puzzle of living and doing;
+And so am I.
+
+Come with me, then,
+And we'll leave it far and far away...
+(Only you and I, understand!)
+
+You have played,
+(I think)
+And broke the things you were fondest of,
+And are a little tired now;
+Tired of things that break, and--
+Just tired.
+So am I.
+
+But I come with a dream in my eyes tonight,
+And I knock with a rose at at the hopeless gate of your heart--
+Open to me!
+For I will show you the places Nobody knows,
+And, if you like,
+The perfect places of Sleep.
+
+Ah, come with me!
+I'll blow you that wonderful bubble, the moon,
+That floats forever and a day;
+I'll sing you the jacinth song
+Of the probable stars;
+I will attempt the unstartled steppes of dream,
+Until I find the Only Flower,
+Which shall keep (I think) your heart
+While the moon comes out of the sea.
+-->
+
 <!DOCTYPE html>
+<html>
 <head>
     <title>Christian Sheehan</title>
-    <meta name="description" content="i swear by all flowers">
+    <meta name="description" content="before real estate was real">
     <link rel="shortcut icon" href="/images/paintbrush.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/75717fae19.js" crossorigin="anonymous"></script>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevent scroll bars */
-            background-color:#242424;
-        }
-
-        .container2 {
-            position: relative;
-            height: 70vh; /* 70% of the viewport height */
-            width: 100%;
-            overflow: hidden; /* Clip the image overflow */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .container2 img {
-            height: 100%;
-            width: auto; /* Maintain aspect ratio */
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        body {
+            user-select: none;
+            overflow-y: hidden;
         }
     </style>
 </head>
 <body>
-    <div class="container2">
-        <img src="images/arrested.png" alt="Centered Image">
-    </div>
+    <div class="home-container">
+    <a href="music/catwithascarf" title="Cat With a Scarf">
+        <img class="paintbrush" src="/images/paintbrush.png" ontouchstart="changeImage()" ontouchend="restoreImage()" onmouseover="changeImage()" onmouseout="restoreImage()" />
+    </a>
 
     <div id="emailFormContainer" class="hidden">
         <a title="Email" ontouchstart="toggleLink3(this)" class="emaillink" href="mailto:christiansheehan@christiansheehan.com" id="emailAddress" style="margin-bottom: 8px;">christiansheehan@christiansheehan.com</a>
@@ -52,5 +68,7 @@
         <li><a title="Music" ontouchstart="toggleLink(this)" href="/music"><i class="fa fa-music fa-2x"></i></a></li>
         <li><a title="Projects" ontouchstart="toggleLink(this)" href="/projects"><i class="fa fa-code fa-2x"></i></a></li>
     </ul>
+</div>
 </body>
+
 </html>
